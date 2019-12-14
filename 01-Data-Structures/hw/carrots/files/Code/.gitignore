@@ -1,1 +1,6 @@
-
+Genom.py - source code
+dna.fasta - file with input data
+counting_nucleotides - file with statistics of nucleotide number in DNA
+rna_codon_table - input file with translation RNA codons to protein
+translation_from_dna_to_rna - file with rna translation for each gene
+translation_rna_to_protein - file with gene`s codons
