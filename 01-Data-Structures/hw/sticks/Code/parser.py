@@ -1,5 +1,3 @@
-import random
-import sys
 
 first_input_file = 'winedata_1.json'
 second_input_file = 'winedata_2.json'
