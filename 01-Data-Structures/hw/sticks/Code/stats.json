@@ -1,505 +1,538 @@
-{
-	statistics
-	[
-		{
-			wine
-			[
-				{
-					Gewürztraminer
-					region_count : 
-					average price : 0
-					most common country : 
-					average score : 0
-					min price : 0
-					max price : 0
-				},
-				{
-					Gewurztraminer
-					region_count : 
-					average price : 0
-					most common country : 
-					average score : 0
-					min price : 0
-					max price : 0
-				},
-				{
-					Riesling
-					region_count : Finger Lakes
-					average price : 30.621734985700666
-					most common country : Germany
-					average score : 89.45433746425167
-					min price : 5
-					max price : 775
-				},
-				{
-					Merlot
-					region_count : Columbia Valley
-					average price : 29.162738853503186
-					most common country : US
-					average score : 87.21305732484076
-					min price : 4
-					max price : 625
-				},
-				{
-					Madera
-					region_count : 
-					average price : 0
-					most common country : 
-					average score : 0
-					min price : 0
-					max price : 0
-				},
-				{
-					Tempranillo
-					region_count : Rioja
-					average price : 30.73224043715847
-					most common country : Spain
-					average score : 87.50382513661202
-					min price : 4
-					max price : 600
-				},
-				{
-					Red Blend
-					region_count : Columbia Valley
-					average price : 33.97878921785241
-					most common country : Italy
-					average score : 88.38245691559877
-					min price : 5
-					max price : 500
-				},
-			],
-		},
-		{
-			cheapest average price : 				Slovakia
-			most active commentator : 				Roger Voss
-			most expensive average price : 				Switzerland
-			most underrated country : 				Bosnia and Herzegovina
-			cheapest wine : 4
-			most expensive wine : 				Ch\u00e2teau les Ormes Sorbet 2013  M\u00e9doc
-			highest score : 				Cayuse 2008 Bionic Frog Syrah (Walla Walla Valley (WA))
-				Charles Smith 2006 Royal City Syrah (Columbia Valley (WA))
-				Ch\u00e2teau L\u00e9oville Barton 2010  Saint-Julien
-				Cardinale 2006 Cabernet Sauvignon (Napa Valley)
-				Avignonesi 1995 Occhio di Pernice  (Vin Santo di Montepulciano)
-				Louis Roederer 2008 Cristal Vintage Brut  (Champagne)
-				Krug 2002 Brut  (Champagne)
-				Casanova di Neri 2007 Cerretalto  (Brunello di Montalcino)
-				Chambers Rosewood Vineyards NV Rare Muscat (Rutherglen)
-				Ch\u00e2teau L\u00e9oville Las Cases 2010  Saint-Julien
-				Verit\u00e9 2007 La Muse Red (Sonoma County)
-				Casa Ferreirinha 2008 Barca-Velha Red (Douro)
-				Tenuta dell'Ornellaia 2007 Masseto Merlot (Toscana)
-				Biondi Santi 2010 Riserva  (Brunello di Montalcino)
-				Salon 2006 Le Mesnil Blanc de Blancs Brut Chardonnay (Champagne)
-				Quinta do Noval 2011 Nacional Vintage  (Port)
-				Ch\u00e2teau Haut-Brion 2014  Pessac-L\u00e9ognan
-				Ch\u00e2teau Lafite Rothschild 2010  Pauillac
-				Ch\u00e2teau Cheval Blanc 2010  Saint-\u00c9milion
-			most rated country : 				China
-			lowest score : 				Terrenal 2013 Estate Bottled Malbec (Mendoza)
-				Toca Diamonte 2010 Malbec (Mendoza)
-				Santa Alicia 2001 Estate Chardonnay (Maipo Valley)
-				Quasar 2009 Chardonnay (Curic\u00f3 Valley)
-				Ren\u00e9 Barbier NV Mediterranean White White (Catalonia)
-				Beach Kite 2012 Moscato (Central Valley)
-				Aguirre 2014 Gaucho Andino Chardonnay (Maule Valley)
-				La Playa 2009 Un-Oaked Chardonnay (Colchagua Valley)
-				Backhouse 2010 Pinot Noir (California)
-				flipflop NV Left Coast Moscato (Chile)
-				Freixenet NV Carta Nevada Brut  (Pened\u00e8s)
-				Aguirre 2014 Gaucho Andino Chardonnay (Maule Valley)
-				Despierta 2014 Chardonnay (La Mancha)
-				Montinore 2000 M\u00fcller-Thurgau (Willamette Valley)
-				Turning Leaf 2001 Reserve Riesling (Monterey)
-				Torre Oria 2014 Shiraz-Tempranillo (Valencia)
-				Santa Rita 2010 120 Sauvignon Blanc (Central Valley)
-				Bodegas del Mundo 2011 Valdemoreda Rosado Garnacha (Rioja)
-				Mano A Mano 2009 Manon Tempranillo (Vino de la Tierra de Castilla)
-				Santa Julia 2007 Merlot (Mendoza)
-				Pampa 2014 Estate Malbec (Mendoza)
-				Seigneurs de Bergerac 1999 White (Bergerac)
-				Cristobal 1492 2009 1492 White White (Mendoza)
-				Viniverde 2011 Estreia Ros\u00e9 (Vinho Verde)
-				Bodegas del Mundo 2010 Valdemoreda  (Rioja)
-				Hawthorne Ridge 2013 Chardonnay (Cari\u00f1ena)
-				CK Mondavi 2013 Willow Springs White Zinfandel (California)
-				Rio Seco 2007 Estate Bottled Malbec (Mendoza)
-				Oak Grove 2008 Reserve Petite Sirah (California)
-				Bodegas del Mundo 2012 Valdemoreda Blanco Viura (Rioja)
-				Millaman 2000 Chardonnay (Curic\u00f3 Valley)
-				Ch\u00e2teau de Pennautier 2001 Cabernet Sauvignon (Vin de Pays d'Oc)
-				Mountain View 2005 Cabernet Sauvignon (Central Coast)
-				Bodega Norton 1999 Chardonnay (Mendoza)
-				Mapreco 2014 White (Vinho Verde)
-				Twisted 2012 Moscato (Mendoza)
-				Castillo de Mons\u00e9ran 2006 Garnacha (Cari\u00f1ena)
-				Viniverde 2011 Estreia Ros\u00e9 (Vinho Verde)
-				Finca El Origen 2010 Syrah (Mendoza)
-				Bocopa 2014 Alone Ros\u00e9 (Alicante)
-				Vi\u00f1a el Aromo 2010 Viognier (Maule Valley)
-				Targovishte 2009 Muskat Ottonel (Bulgaria)
-				Love 2015 Tempranillo (Vino de la Tierra de Castilla)
-				Love 2015 Merlot (Vino de la Tierra de Castilla)
-				Maximo 2014 Edicion Limitada Viura (Vino de la Tierra de Castilla)
-				Rojo Mojo 2010 Tempranillo (La Mancha)
-				Arge & Tina 2011 Malbec (San Juan)
-				Vi\u00f1a el Aromo 2011 Sauvignon Blanc (Maule Valley)
-				TorresManur 2008 Pindal Verdejo-Viura (Rueda)
-				Pe\u00f1ascal 2011 Tempranillo Ros\u00e9 (Vino de la Tierra de Castilla y Le\u00f3n)
-				Freixenet NV Spumante Sparkling (Cava)
-				Kumbaya NV Red (California)
-				Callia 2015 Alta Cabernet Sauvignon (Tulum Valley)
-				Love 2015 Chardonnay (Vino de la Tierra de Castilla)
-				Rojo Mojo 2010 Tempranillo (La Mancha)
-				Sierra Norte 2012 Ananto Red (Utiel-Requena)
-				Cristalino NV Extra Dry  (Pened\u00e8s)
-				Alta Vista 2007 Finca Monte Lindo Chardonnay (Mendoza)
-				Vi\u00f1a Cantos\u00e1n 2008 Verdejo (Rueda)
-				Sierra Virgen 2009 Air\u00e9n Airen (Vino de la Tierra de Castilla)
-				Santa Rita 2006 120 Chardonnay (Aconcagua Valley)
-				Ironstone 2007 Sauvignon Blanc (California)
-				Condado de Oriza 2007  Ribera del Duero
-				Ca' Momi 2007 Rosso Di California Red (California)
-				oops 2011 Carmen\u00e8re (Central Valley)
-				Coyote Creek 2012 Cabernet Sauvignon (California)
-				Tussock Jumper 2011 Moscato (Valencia)
-				Campus Oaks 2012 Chardonnay (Lodi)
-				Bodegas Medina 2011 Jaloco Rosado Ros\u00e9 (Ribera del Guadiana)
-				Canoas 2011 Estate Collection Syrah (San Juan)
-				Alfredo Roca 2006 Chardonnay
-				Torito Bravo NV Sweet Chardonnay-Moscato White (Spain)
-				Hat in the Ring 2007 Wizard Pinot Grigio (Mendoza)
-				Arauco 2011 Merlot (Central Valley)
-				Santa Ema 2012 Select Terroir Sauvignon Blanc (Maipo Valley)
-				Finca Sophenia 2007 Altosur Ros\u00e9 Malbec (Tupungato)
-				Tenimenti Montagnana 2014 Rubentino  (Montepulciano d'Abruzzo)
-				Soleau 2008 Viognier (Sierra Foothills)
-				Ku D\u00e9 Ta 2006 Malbec (Mendoza)
-				Alfasi 1998 Reserve Merlot (Maule Valley)
-				Pueblo del Sol 2009 Tannat (Juanico)
-				Bodegas Valdemar 2010 Conde de Valdemar Rosado Ros\u00e9 (Rioja)
-				Esser Cellars 2005 Zinfandel (California)
-				California's Jewel 2004 Old Vine Zinfandel (Lodi)
-				Pessimist 2012 Cabernet Sauvignon (California)
-				Fat Gaucho 2011 Malbec (Mendoza)
-				Arrow Creek 2005 Vintner's Selection Cabernet Sauvignon (California)
-				Bodegas San Valero 2014 Particular White (Cari\u00f1ena)
-				Mureda 2014 Organic Sauvignon Blanc (Vino de la Tierra de Castilla)
-				Bodegas Corellanas 2011 Vi\u00f1a Rubican Ros\u00e9 (Navarra)
-				Concannon 2008 Selected Vineyards Merlot (Central Coast)
-				Bodegas Franco-Espa\u00f1olas 2010 Royal  (Rioja)
-				Caligiore 2007 Grazioso Chardonnay-Torrontes White (Mendoza)
-				Bodegas Virgen del \u00c1guila 2010 Circles Syrah & Garnacha Syrah-Grenache (Cari\u00f1ena)
-				Mountain Door 2014 Malbec (Mendoza)
-				Uni\u00f3n Vin\u00edcola del Este NV Vega Medien Brut Ros\u00e9 Garnacha (Cava)
-				Immersion 2011 White (California)
-				Georges Duboeuf 2001 Vin de Pays de l'Ardeche Viognier (France)
-				Fat Cat 2010 Merlot (California)
-				J. Garcia Carrion 1997 Anta\u00f1o Crianza  (Rioja)
-				Gran Familia 2011  Rioja
-				Hess 2007 Sauvignon Blanc (Lake County)
-				McManis 2007 Zinfandel (California)
-				Snapping Turtle 2011 Merlot (California)
-				Mont Tauch 1998 Red (Fitou)
-				Emiliana 2009 Natura Gew\u00fcrztraminer (Rapel Valley)
-				Bougrier 2015 Gamay-Grolleau  (Ros\u00e9 d'Anjou)
-				Bodega Beleluin 2011 Amadeo Viura (Rioja)
-				San Pedro 2011 Epica Cabernet Sauvignon (Central Valley)
-				San Pedro 2011 Epica Red (Central Valley)
-				Bodegas Fari\u00f1a 2009 Dama de Toro Malvasia (Toro)
-				T 2015  Toro
-				Familia Monta\u00f1a 2015 Monta\u00f1a Tinto  (Rioja)
-				Baroncini 1998 Le Mandorlae  (Morellino di Scansano)
-				Quara 2012 Estate Bottled Cabernet Sauvignon (Cafayate)
-				Stella Mia NV Rosso e Dolce Brachetto (Italy)
-				Kitchen Sink NV Chardonnay (California)
-				Rai 2013 Sauvignon Blanc (Central Valley)
-				Marcus James 2000 Chardonnay (Mendoza)
-				Valentin Bianchi 2001 Elsa Chardonnay (San Rafael)
-				Portal Del Alto 2000 Gran Reserva Chardonnay (Maipo Valley)
-				Tortoise Creek 2011 Schoolhouse Cuv\u00e9e Merlot (Clarksburg)
-				Castel Grisch 2007 Chancellor (Finger Lakes)
-				Woomera 2006 Chardonnay (South Eastern Australia)
-				Insatiable 2011 Cabernet Sauvignon (Lodi)
-				Buzzard Tree 2005 Zinfandel (Paso Robles)
-				Domaine Jean Bousquet 2007 Ros\u00e9 Malbec-Cabernet Sauvignon (Tupungato)
-				Inkling 2012 Cabernet Sauvignon (Paso Robles)
-				Dancing Bull 2005 Zinfandel (California)
-				Fabre Montmayou 2012 Phebus Torront\u00e9s (Mendoza)
-				William Cole 2014 Albamar Chardonnay (Casablanca Valley)
-				Ernesto Catena 2014 Padrillos Malbec (Mendoza)
-				Michel Torino 2014 Ros\u00e9 (Calchaqu\u00ed Valley)
-				Renwood 2007 Red Label Zinfandel (Sierra Foothills)
-				Conquista 2013 Oak Cask Red (Mendoza)
-				Argana 2010 Cabernet Sauvignon (Mendoza)
-				Familia Cassone 2011 Finca La Florencia Cabernet Sauvignon (Mendoza)
-				Peirano 2009 The Other Red (Lodi)
-				Agust\u00edn Cubero 2013 Unus Old Vine Garnacha (Calatayud)
-				Pessimist 2012 Chardonnay (California)
-				Fog Hill NV Red (Napa County)
-				Finca Patagonia 2015 Expedicion Chardonnay (Maule Valley)
-				Bodega Cuarto Dominio 2012 Lote 44 Pinot Grigio (Mendoza)
-				Zolo 2008 Viognier (Mendoza)
-				Root1 2009 Chardonnay (Casablanca Valley)
-				Indomita 2009 Selected Varietal Merlot (Maipo Valley)
-				Fattoria Giuseppe Savini 2011 Rondineto Merlot (Colli Aprutini)
-				Alfredo Roca 2007 Sauvignon Blanc
-				Red Knot 2007 Shiraz (South Australia)
-				BookCliff NV Lucky Twenty White (Colorado)
-				Evoh\u00e9 2011 Con Batonage Garnacha Blanca (Vino de la Tierra del Bajo Arag\u00f3n)
-				Pascual Toso 2007 Torront\u00e9s (Maip\u00fa)
-				Domaines Barons de Rothschild (Lafite) 2008 Los Vascos Ros\u00e9 (Colchagua Valley)
-				Valentin Bianchi 2009 Famiglia Bianchi Sauvignon Blanc
-				Gardel 2009 Torront\u00e9s (Mendoza)
-				Alma del Sur 2009 Colecci\u00f3n Cabernet Sauvignon-Malbec (Mendoza)
-				Vi\u00f1a Bisquertt 2008 La Joya Reserve Viognier (Colchagua Valley)
-				Peirano 2012 The Heritage Collection Petite Sirah (Lodi)
-				Peirano 2012 The Heritage Collection Malbec (Lodi)
-				Bohigas 2000 Chardonnay (Catalonia)
-				Tres Exilios 2013 Chardonnay (Mendoza)
-				Fair Hare NV Cabernet Sauvignon (North Coast)
-				Maray 2013 Reserva Sauvignon Blanc (Limar\u00ed Valley)
-				Cedar Mountain 2008 Blanche's Vineyard Sauvignon Blanc (Livermore Valley)
-				Villa Vi\u00f1a 2006 Torront\u00e9s (Salta)
-				Silver Cap NV Blanc de Blancs Brut Sparkling (Vin Mousseux)
-				Congress Springs 2006 Pinot Noir (California)
-				Bocage 2006 Merlot (Monterey)
-				Fran\u00e7ois Lurton 2008 Hacienda Araucano Carmen\u00e8re (Colchagua Valley)
-				De Martino 1999 Prima Reserva Merlot (Maipo Valley)
-				Cultivate 2011 Copa Cabana Cabernet Sauvignon-Carmen\u00e8re (Central Valley)
-				Baron Herzog 2009 Old Vine Zinfandel (Lodi)
-				Vega Murillo 2008  Toro
-				Masterpiece 2012 Cabernet Sauvignon (Russian River Valley)
-				Vega de Tera 2014 Halcon Verdejo (Vino de la Tierra de Castilla y Le\u00f3n)
-				Espuela del Gaucho 2011 Gaucho Spur Malbec (Mendoza)
-				Capay Valley 2011 Viognier (Capay Valley)
-				Reyter 2009 Finca La Martina Chardonnay (Mendoza)
-				Chaddsford 2007 Proprietor's Reserve White (Pennsylvania)
-				Nine x Nine 2006 Old Vine Zinfandel (Lodi)
-				L.A. Cetto 2013 Chenin Blanc (Valle de Guadalupe)
-				Viniterra 2007 Malbec (Mendoza)
-				Chono 2012 Single Vineyard Cabernet Sauvignon (Maipo Valley)
-				Espuela del Gaucho 2012 Gaucho Spur Cabernet Sauvignon (Mendoza)
-				Zinsane 2011 Zinfandel (Lodi)
-				Conde de Subirats NV Brut Sparkling (Cava)
-				Dominio de la Vega 2010 Bobal (Utiel-Requena)
-				Korbel NV Rouge  (Sonoma County)
-				Conde de Vel\u00e1zquez 2006 El Conde Gran Reserva Syrah (Aconcagua Valley)
-				Tres Exilios 2012 Bonarda (Mendoza)
-				Cave de Ribeauvill\u00e9 NV Giersberger Brut Sparkling (Cr\u00e9mant d'Alsace)
-				Amity 1999 Eco Wine Cattrall Brothers Pinot Noir (Oregon)
-				Ignacio Mar\u00edn 2008 Duque de Medina Reserva Old Vine Garnacha (Cari\u00f1ena)
-				Luis Felipe Edwards 2006 Family Selection Malbec (Colchagua Valley)
-				Ochoa 2011 Viura Chardonnay White (Navarra)
-				Heavyweight 2009 \u201cChamp\u201d Jim the Gent Cabernet Sauvignon (California)
-				Hollen Family Vineyards 2008 Bonarda (Mendoza)
-				Campo Marin 2006 Selecci\u00f3n Crianza Red (Cari\u00f1ena)
-				Casas del Toqui 2015 Barrel Series Reserva Pinot Noir (Cachapoal Valley)
-				Viu Manent 2012 Gran Reserva Malbec (Colchagua Valley)
-				Teillery 2014 Organic Carmen\u00e8re (Maipo Valley)
-				Cinco Sentidos 2009 Chardonnay (Mendoza)
-				Arrocal 2015 Rosa de Arrocal Ros\u00e9 (Ribera del Duero)
-				Teillery 2014 Organic Cabernet Sauvignon (Maipo Valley)
-				Montelle 2008 Chambourcin (Missouri)
-				Paul Cheneau NV Demi Sec Sparkling (Cava)
-				Quintay 2013 Clava Reserve Carmen\u00e8re (Rapel Valley)
-				Fabre Montmayou 2005 Phebus Reserva Malbec (Mendoza)
-				Aromal 2008 Verdejo (Rueda)
-				M\u00e4nnle 2012 Chardonnay (Itata Valley)
-				Lamadrid 2014 Single Vineyard Cabernet Sauvignon (Agrelo)
-				Haarth 2013 Made With Organic Grapes Cabernet Sauvignon (Argentina)
-				Casa Perini 2015 Macaw Soft Tannat (Serra Ga\u00facha)
-				Stanburn 2011 Bull's Blush Ros\u00e9 (Virginia)
-				Tacama 2010 Brut Sparkling (Ica)
-				LangeTwins 2010 Estate grown Malbec (Lodi)
-				Fr\u00e9d\u00e9ric Mallo 2014 Special Delivery Pinot Blanc (Alsace)
-				Estancia Piedra 2007 Rosado Ros\u00e9 (Toro)
-				Clayhouse 2006 Cabernet Sauvignon (Paso Robles)
-				Bodega Carmine Granata NV Pinot Noir (Mendoza)
-				Staphyle 2008 V\u00e1stago de Gea Cabernet Sauvignon (Luj\u00e1n de Cuyo)
-				Stanburn 2011 Chardonnay (Virginia)
-				Pradorey 2016 Tempranillo-Merlot Fermentado en Barrica Rosado (Ribera del Duero)
-				Estancia 2005 Cabernet Sauvignon (Paso Robles)
-				Ronan 2005 Lakeview Vineyards Zinfandel (Monterey County)
-				Caligiore 2006 Reserve Syrah (Mendoza)
-				M\u00e4nnle 2012 Reserva Carmen\u00e8re (Itata Valley)
-				Idrias 2011 Chardonnay (Somontano)
-				Finca Pasi\u00f3n 2009 Mi Fuego Syrah (Mendoza)
-				Hermes 2006 Estate Bottled Nebbiolo (Ohio)
-				Pacific Oasis 2005 Chardonnay (Santa Barbara County)
-				Ricardo Santos 2009 S\u00e9millon (Mendoza)
-				Namast\u00e9 Vineyards 2006 Serenity Vineyard Chardonnay (Willamette Valley)
-				Finnegan's Lake 2007 Fin Cabernet Sauvignon (California)
-				Vinisterra 2011 Domin\u00f3 Cinsault (San Antonio de las Minas Valley)
-				Vi\u00f1a Santa Marina 2012 Merlot Rosado (Extremadura)
-				Cuevas del Sur 2010 Reserve Chardonnay (Maule Valley)
-				Flock by Smoking Loon 2007 Merlot (Napa Valley)
-				Pietra Santa 2004 Merlot (Cienega Valley)
-				Arrocal 2014 Rosa de Arrocal Ros\u00e9 (Ribera del Duero)
-				Luminis 2012 Cabernet Sauvignon (Luj\u00e1n de Cuyo)
-				Fioravante 2008 Reserva Malbec (Mendoza)
-				Sharabella Wines 2008 Padre Amante Reserve Cabernet Sauvignon (Lodi)
-				Santa Alicia 2015 Gran Reserva Chardonnay (Maipo Valley)
-				Ardales 2008 Organic Tempranillo (Vino de la Tierra de Castilla)
-				Piattelli 2010 Premium Ros\u00e9 of Malbec Ros\u00e9 (Luj\u00e1n de Cuyo)
-				3 Horse Ranch Vineyards 2014 Ros\u00e9
-				Marichal 2012 Premium Varietal Chardonnay (Canelones)
-				Fiesta Winery NV Skinny Dippin White (Texas)
-				Rooster Hill 2007 Dry Riesling (Finger Lakes)
-				Tapiz 2006 Merlot (Mendoza)
-				Rooster Hill 2007 Estate Gew\u00fcrztraminer (Finger Lakes)
-				Andeluna 2015 1300 Chardonnay (Valle de Uco)
-				Corinto 2009 Selection Syrah (Central Valley)
-				Casa Tiene Vista 2012 City Lights Chardonnay (California)
-				Maddalena 2010 Pinot Grigio (Monterey)
-				Willow Creek 2000 Pinot Noir (Canterbury)
-				Montelle 2008 Dry Vignoles (Missouri)
-				Stacked Stone 2004 The Gem Red (Paso Robles)
-				Kuentz-Bas 2014 Tradition Pinot Blanc (Alsace)
-				Viejo Isaias 2013 Malbec Ros\u00e9 (Mendoza)
-				Abad Dom Bueno 2007 Godello (Bierzo)
-				Sembro 2012 Vendimia Seleccionada  (Ribera del Duero)
-				Trapiche 2006 Broquel Pinot Noir (Mendoza)
-				Reula 2003 Oak Aged Tempranillo-Merlot (Cari\u00f1ena)
-				Ronan 2005 Lakeview Vineyards Syrah (Monterey County)
-				Kuentz-Bas 2014 Tradition Pinot Blanc (Alsace)
-				Agate Ridge 2007 Cascade Terrace Red Red (Rogue Valley)
-				Cooper Vineyards NV Noche Sweet Table Wine Red (Virginia)
-				Hom NV Ros\u00e9 Malbec (Mendoza)
-				Torre Oria NV Brut Nature Sparkling (Cava)
-				Enate 2013 234 Chardonnay (Somontano)
-				Bodega Carmine Granata 2009 S\u00e9millon (Mendoza)
-				Finca El Origen 2007 Gran Reserva Malbec (Uco Valley)
-				Bodega Rolland 2013 Mariflor Michel Rolland Sauvignon Blanc (Mendoza)
-				Pietra Santa 2004 Dolcetto (Cienega Valley)
-				Domaine de la Tour Blanche 2014 Pinot Blanc (Alsace)
-				Mission Trail 2006 Syrah (Monterey County)
-				Four Vines 2005 Syrah (Paso Robles)
-				Quickfire 2008 Top Chef Merlot (Napa Valley)
-				Paschal 2001 Pinot Gris (Rogue Valley)
-				Rosa d'Oro 2007 Dolcetto (Lake County)
-				Tucannon 2014 Cabernet Franc Ros\u00e9 (Columbia Valley (WA))
-				Ventisquero 2012 Queulat Single Vineyard Gran Reserva Sauvignon Blanc (Leyda Valley)
-				Pietra Santa 2009 Estate Grown Pinot Noir (Cienega Valley)
-				Loken Cellars NV Reserve Lot 14 Ros\u00e9 (California)
-				Mission Trail 2006 Syrah (Monterey County)
-				Ektimo Vineyards 2013 Sauvignon Blanc (Bennett Valley)
-				Laurel Lake 1998 Reserve Chardonnay (North Fork of Long Island)
-				Arrow Creek 2011 Coastal Series Cabernet Sauvignon (California)
-				Elizabeth Rose 2007 Sauvignon Blanc (Napa Valley)
-				Pietra Santa 2009 Estate Grown Pinot Noir (Cienega Valley)
-				Brutocao 2005 Feliz Vineyard Barbera (Mendocino)
-				Greenwood Ridge 2007 Sauvignon Blanc (Anderson Valley)
-				Barkan 1996 Reserve Cabernet Sauvignon (Galil)
-				Macari 1997 Estate Bottled Cabernet Franc (North Fork of Long Island)
-				SignoSeis 2012 The Angel Oak Ros\u00e9 (Valle de Uco)
-				La Val 2016 M\u00e1s Que 2 White (R\u00edas Baixas)
-				Vina Robles 2004 Cabernet Sauvignon (Paso Robles)
-				Eleusis 2006 Albari\u00f1o (R\u00edas Baixas)
-				Cruzat NV Cl\u00e1sico Brut  (Mendoza)
-				Vi\u00f1a Tarapac\u00e1 2015 Gran Reserva Chardonnay (Leyda Valley)
-				Kirkland Signature 2013 Signature Series Mountain Cuvee Cabernet Sauvignon (Napa Valley)
-				Sawyer 2007 Estate Sauvignon Blanc (Rutherford)
-				Ch\u00e2teau Timberlay 2009  Bordeaux Sup\u00e9rieur
-				Gatos Locos 2007 Chardonnay (Mokelumne River)
-				Graffigna 2005 Grand Reserve Malbec (San Juan)
-				Spann Vineyards 2004 Mo Zin Red (Sonoma County)
-				La Cave des Vignerons de Pfaffenheim 2009 Pinot Noir (Alsace)
-				Finca Constancia 2007 Red (Vino de la Tierra de Castilla)
-				Rosa d'Oro 2008 Estate Grown Barbera (Clear Lake)
-				Beronia 2007 Elaboraci\u00f3n Especial  (Rioja)
-				Vi\u00f1edos Altamira Valley 2011 VAV Malbec (Valle de Uco)
-				Cruz Alta 2007 Grand Reserve Malbec (Mendoza)
-				Fiesta Winery NV Side Saddle White (Texas)
-				Fran\u00e7ois Lurton 2006 Gran Lurton Cabernet Sauvignon (Mendoza)
-				Bota Box 2011 Moscato (Mendoza)
-				Gran Castillo Royal 2012 Verdejo (Vino de la Tierra de Castilla)
-				Barra of Mendocino 2011 Pinot Noir (Mendocino)
-				Chronic Cellars 2006 Sofa King Bueno Red (Paso Robles)
-				Lidio Carraro 2010 Da'divas Chardonnay (Vale dos Vinhedos)
-				James Wyatt 2013 Merlot (Horse Heaven Hills)
-				Ribas del C\u00faa 2004 Crianza Menc\u00eda (Bierzo)
-				Lost Oak 2015 Bingham Family Vineyard Viognier (Texas High Plains)
-				Michael David 2005 Petite Petit Red (Lodi)
-				Peju 2011 Sauvignon Blanc (Napa Valley)
-				Finca Don Carlos 2011 Calathus Roble Chardonnay (Uco Valley)
-				Villa Toscano 2010 Erika's Reserve Zinfandel (Shenandoah Valley (CA))
-				Antonio Gonzalez 2012 Galan Reserva Cabernet Sauvignon (Mendoza)
-				Gran Verano 2011 Gran Verano Cabernet Sauvignon (Central Valley)
-				Star Lane Vineyard 2012 Estate Grown Sauvignon Blanc (Happy Canyon of Santa Barbara)
-				Michel Picard 2007  Sancerre
-				Hatcher 2005 Sewell Red (Calaveras County)
-				Moss Roxx 2010 Ancient Vine Zinfandel (Lodi)
-				Fenestra 2007 Silvaspoons Vineyards Touriga Nacional (Lodi)
-				Longevity 2005 Merlot (Sierra Foothills)
-				Honora NV Cabernet Sauvignon (America)
-				Santa Barbara Winery 2008 Stolpman Vineyard Sangiovese (Santa Ynez Valley)
-				Jigar 2009 Zinfandel (Dry Creek Valley)
-				Bloomfield 2008 Chardonnay (Contra Costa County)
-				Zudugarai 2015 Hondarrabi Zuri (Getariako Txakolina)
-				Chozas Carrascal 2004 Las Ocho Red (Utiel-Requena)
-				Lions Peak 2002 Late Harvest Viognier (California)
-				Black Box 2012 Sauvignon Blanc (Central Valley)
-				Black Box 2011 Malbec (Mendoza)
-				Ch\u00e2teau Majoureau 2009 Hyppos  (Bordeaux Sup\u00e9rieur)
-				Arger-Martucci 2006 Viognier (Russian River Valley)
-				Bloomfield 2008 Devil's Daughter White (Contra Costa County)
-				Moss Roxx 2011 Ancient Vine Zinfandel (Lodi)
-				Domaine Bernhard & Reibel 2014 Hahnenberg Pinot Gris (Alsace)
-				Monte De Oro 2009 Cuvee de Oro Red (Temecula Valley)
-				Miolo 2009 Cuv\u00e9e Giuseppe Chardonnay (Vale dos Vinhedos)
-				San Simeon 2009 Syrah (Paso Robles)
-				Santa Alicia 2010 Edici\u00f3n Limitada Gran Reserva de Los Andes Pinot Noir (Casablanca Valley)
-				3 Steves Winery 2008 Reserve Cabernet Sauvignon (Livermore Valley)
-				Oriol Rossell NV Gran Reserva Brut Nature Sparkling (Cava)
-				Eric Ross 2007 Saralee's Vineyard Marsanne-Roussanne (Russian River Valley)
-				McGregor 2006 Pinot Noir (Finger Lakes)
-				Midnight 2006 Estate Reserve Chardonnay (Paso Robles)
-				Midnight 2006 Estate Reserve Chardonnay (Paso Robles)
-				Pianetta 2004 Cabernet Sauvignon (Monterey)
-				Highland Hills Winery 2011 Lola Red (Ramona Valley)
-				Sunstone 2007 Syrah Ros\u00e9 (Santa Ynez Valley)
-				South Coast 2005 Wild Horse Peak Mountain Vineyards 4-Block Blend Cabernet Sauvignon (South Coast)
-				Del Rio 2007 Pinot Noir (Rogue Valley)
-				Tin Barn 2010 Los Chamizal Vineyard Zinfandel (Sonoma Valley)
-				Estrella Creek 2005 Petite Sirah (Paso Robles)
-				O. Fournier 2002 Spiga  (Ribera del Duero)
-				Wise Villa 2011 Zinfandel (California)
-				Wise Villa 2011 Tempranillo (Sierra Foothills)
-				Tin Barn 2003 Tombs Creek Vineyard Cabernet Sauvignon (Sonoma County)
-				Angosto 2011 Blanco White (Valencia)
-				Rezonja 2005 Cabernet Sauvignon (Alexander Valley)
-				Rosati Family 2007 Cabernet Sauvignon (Mendocino County)
-				Peter Cellars 2011 Carneros Estate Pinot Noir (Carneros)
-				Convento San Francisco 2008  Ribera del Duero
-				Reyes NV White Delight White (Sierra Pelona Valley)
-				Fallbrook 2004 Special Selection Syrah (Central Coast)
-				Loma Larga 2011 Brut Nature Limited Edition Cabernet Franc (Casablanca Valley)
-				Muscardini 2009 Gracie Creek Vineyards Syrah (Sonoma Valley)
-				Cono Sur 2009 20 Barrels Limited Edition Pinot Noir (Casablanca Valley)
-				Finca La Anita 2007 Sin Madera Petit Verdot (Mendoza)
-				Jack Creek 2011 Kruse Vineyards Chardonnay (Central Coast)
-				Calcareous 2009 Cabernet Sauvignon (York Mountain)
-				Bryter 2009 Hayley Vineyard Pinot Noir (Anderson Valley)
-				Cantara 2007 Petite Sirah (Lodi)
-				Ideology Cellars 2012 Proprietary Blend Syrah-Cabernet Sauvignon (Napa Valley)
-				Mission Trail 2005 Friars' Vineyard Garnacha (Monterey County)
-				Four Vines 2005 The Peasant Red (Paso Robles)
-				Finca Valpiedra 2008 Reserva  (Rioja)
-				Vindemia 2006 Commonwealth Red (South Coast)
-				French Hill 2006 Grand Reserve Petit Verdot (California)
-				Arrowhead Mountain 2008 Primary Red (Sonoma Valley)
-				Watts 2004 Watts Vineyard Cabernet Franc (Lodi)
-				Vivencias 2008 V Tempranillo (Vino de Calidad de Valtiendas)
-				Spann Vineyards 2004 Twenty-Three Barrels Mo Jo Red (Sonoma County)
-				Catharine Valley 2005 Reserve Cabernet Franc (Finger Lakes)
-				Opolo 2011 Reserve Zinfandel (Paso Robles)
-				Casa Tiene Vista NV DeLuz Red (California)
-				Mill\u00e9sim\u00e9 2008 Scopire Red (Santa Ynez Valley)
-				Mill\u00e9sim\u00e9 2005 Scoprire Red (California)
-				Grgich Hills 2004 Miljenko's Old Vines Zinfandel (Napa Valley)
-				Quinta do Pinto 2008 Touriga Nacional (Lisboa)
-				Cantine Benedetti 2008 Corte Antica  (Valpolicella Classico Superiore)
-		},
-	],
-},
+{	
+	"statistics": 
+	{		
+		"most_expensive_wine": "Ch\u00e2teau les Ormes Sorbet 2013  M\u00e9doc",
+		"most rated country": "England",
+		"most underrated country": "Peru",
+		"highest score":
+		[			
+			"Charles Smith 2006 Royal City Syrah (Columbia Valley (WA))",
+			"Cayuse 2008 Bionic Frog Syrah (Walla Walla Valley (WA))",
+			"Ch\u00e2teau L\u00e9oville Barton 2010  Saint-Julien",
+			"Cardinale 2006 Cabernet Sauvignon (Napa Valley)",
+			"Avignonesi 1995 Occhio di Pernice  (Vin Santo di Montepulciano)",
+			"Louis Roederer 2008 Cristal Vintage Brut  (Champagne)",
+			"Krug 2002 Brut  (Champagne)",
+			"Casanova di Neri 2007 Cerretalto  (Brunello di Montalcino)",
+			"Chambers Rosewood Vineyards NV Rare Muscat (Rutherglen)",
+			"Ch\u00e2teau L\u00e9oville Las Cases 2010  Saint-Julien",
+			"Verit\u00e9 2007 La Muse Red (Sonoma County)",
+			"Casa Ferreirinha 2008 Barca-Velha Red (Douro)",
+			"Tenuta dell'Ornellaia 2007 Masseto Merlot (Toscana)",
+			"Biondi Santi 2010 Riserva  (Brunello di Montalcino)",
+			"Salon 2006 Le Mesnil Blanc de Blancs Brut Chardonnay (Champagne)",
+			"Quinta do Noval 2011 Nacional Vintage  (Port)",
+			"Ch\u00e2teau Haut-Brion 2014  Pessac-L\u00e9ognan",
+			"Ch\u00e2teau Cheval Blanc 2010  Saint-\u00c9milion",
+			"Ch\u00e2teau Lafite Rothschild 2010  Pauillac"
+		]		
+		,
+		"cheapest country": "Ukraine",
+		"most active commentator": "Roger Voss",
+		"wine:":
+		[			
+			{				
+				"Gewurztraminer": 
+				{					
+					"most common country": "null",
+					"average score": 0,
+					"average price": 0,
+					"max price": 0,
+					"most common region": "null",
+					"min price": 0
+				}				
+			}			,
+			{				
+				"Gewürztraminer": 
+				{					
+					"most common country": "null",
+					"average score": 0,
+					"average price": 0,
+					"max price": 0,
+					"most common region": "null",
+					"min price": 0
+				}				
+			}			,
+			{				
+				"Riesling": 
+				{					
+					"most common country": "Germany",
+					"average score": 89.45433746425167,
+					"average price": 30.621734985700666,
+					"max price": 775,
+					"most common region": "Finger Lakes",
+					"min price": 5
+				}				
+			}			,
+			{				
+				"Merlot": 
+				{					
+					"most common country": "US",
+					"average score": 87.21305732484076,
+					"average price": 29.162738853503186,
+					"max price": 625,
+					"most common region": "Columbia Valley",
+					"min price": 4
+				}				
+			}			,
+			{				
+				"Madera": 
+				{					
+					"most common country": "null",
+					"average score": 0,
+					"average price": 0,
+					"max price": 0,
+					"most common region": "null",
+					"min price": 0
+				}				
+			}			,
+			{				
+				"Tempranillo": 
+				{					
+					"most common country": "Spain",
+					"average score": 87.50382513661202,
+					"average price": 30.73224043715847,
+					"max price": 600,
+					"most common region": "Rioja",
+					"min price": 4
+				}				
+			}			,
+			{				
+				"Red Blend": 
+				{					
+					"most common country": "Italy",
+					"average score": 88.38245691559877,
+					"average price": 33.97878921785241,
+					"max price": 500,
+					"most common region": "Columbia Valley",
+					"min price": 5
+				}				
+			}			
+		]		
+		,
+		"lowest score":
+		[			
+			"Toca Diamonte 2010 Malbec (Mendoza)",
+			"Terrenal 2013 Estate Bottled Malbec (Mendoza)",
+			"Ren\u00e9 Barbier NV Mediterranean White White (Catalonia)",
+			"Santa Alicia 2001 Estate Chardonnay (Maipo Valley)",
+			"Quasar 2009 Chardonnay (Curic\u00f3 Valley)",
+			"Montinore 2000 M\u00fcller-Thurgau (Willamette Valley)",
+			"Turning Leaf 2001 Reserve Riesling (Monterey)",
+			"Beach Kite 2012 Moscato (Central Valley)",
+			"Backhouse 2010 Pinot Noir (California)",
+			"Torre Oria 2014 Shiraz-Tempranillo (Valencia)",
+			"Aguirre 2014 Gaucho Andino Chardonnay (Maule Valley)",
+			"flipflop NV Left Coast Moscato (Chile)",
+			"Freixenet NV Carta Nevada Brut  (Pened\u00e8s)",
+			"La Playa 2009 Un-Oaked Chardonnay (Colchagua Valley)",
+			"Despierta 2014 Chardonnay (La Mancha)",
+			"Aguirre 2014 Gaucho Andino Chardonnay (Maule Valley)",
+			"Santa Rita 2010 120 Sauvignon Blanc (Central Valley)",
+			"Bodega Norton 1999 Chardonnay (Mendoza)",
+			"Millaman 2000 Chardonnay (Curic\u00f3 Valley)",
+			"Bodegas del Mundo 2010 Valdemoreda  (Rioja)",
+			"Hawthorne Ridge 2013 Chardonnay (Cari\u00f1ena)",
+			"Oak Grove 2008 Reserve Petite Sirah (California)",
+			"Rio Seco 2007 Estate Bottled Malbec (Mendoza)",
+			"Castillo de Mons\u00e9ran 2006 Garnacha (Cari\u00f1ena)",
+			"Pampa 2014 Estate Malbec (Mendoza)",
+			"Bodegas del Mundo 2012 Valdemoreda Blanco Viura (Rioja)",
+			"Finca El Origen 2010 Syrah (Mendoza)",
+			"Seigneurs de Bergerac 1999 White (Bergerac)",
+			"Mapreco 2014 White (Vinho Verde)",
+			"Twisted 2012 Moscato (Mendoza)",
+			"Santa Julia 2007 Merlot (Mendoza)",
+			"Viniverde 2011 Estreia Ros\u00e9 (Vinho Verde)",
+			"Mountain View 2005 Cabernet Sauvignon (Central Coast)",
+			"Cristobal 1492 2009 1492 White White (Mendoza)",
+			"Bodegas del Mundo 2011 Valdemoreda Rosado Garnacha (Rioja)",
+			"Bocopa 2014 Alone Ros\u00e9 (Alicante)",
+			"Viniverde 2011 Estreia Ros\u00e9 (Vinho Verde)",
+			"CK Mondavi 2013 Willow Springs White Zinfandel (California)",
+			"Ch\u00e2teau de Pennautier 2001 Cabernet Sauvignon (Vin de Pays d'Oc)",
+			"Mano A Mano 2009 Manon Tempranillo (Vino de la Tierra de Castilla)",
+			"Freixenet NV Spumante Sparkling (Cava)",
+			"Love 2015 Merlot (Vino de la Tierra de Castilla)",
+			"Maximo 2014 Edicion Limitada Viura (Vino de la Tierra de Castilla)",
+			"Love 2015 Tempranillo (Vino de la Tierra de Castilla)",
+			"Sierra Norte 2012 Ananto Red (Utiel-Requena)",
+			"Kumbaya NV Red (California)",
+			"Rojo Mojo 2010 Tempranillo (La Mancha)",
+			"Cristalino NV Extra Dry  (Pened\u00e8s)",
+			"Vi\u00f1a el Aromo 2011 Sauvignon Blanc (Maule Valley)",
+			"Targovishte 2009 Muskat Ottonel (Bulgaria)",
+			"Pe\u00f1ascal 2011 Tempranillo Ros\u00e9 (Vino de la Tierra de Castilla y Le\u00f3n)",
+			"Santa Rita 2006 120 Chardonnay (Aconcagua Valley)",
+			"Sierra Virgen 2009 Air\u00e9n Airen (Vino de la Tierra de Castilla)",
+			"Vi\u00f1a Cantos\u00e1n 2008 Verdejo (Rueda)",
+			"TorresManur 2008 Pindal Verdejo-Viura (Rueda)",
+			"Love 2015 Chardonnay (Vino de la Tierra de Castilla)",
+			"Alta Vista 2007 Finca Monte Lindo Chardonnay (Mendoza)",
+			"Arge & Tina 2011 Malbec (San Juan)",
+			"Rojo Mojo 2010 Tempranillo (La Mancha)",
+			"Vi\u00f1a el Aromo 2010 Viognier (Maule Valley)",
+			"Callia 2015 Alta Cabernet Sauvignon (Tulum Valley)",
+			"Coyote Creek 2012 Cabernet Sauvignon (California)",
+			"Hat in the Ring 2007 Wizard Pinot Grigio (Mendoza)",
+			"Finca Sophenia 2007 Altosur Ros\u00e9 Malbec (Tupungato)",
+			"Mountain Door 2014 Malbec (Mendoza)",
+			"Bodegas Franco-Espa\u00f1olas 2010 Royal  (Rioja)",
+			"Fat Cat 2010 Merlot (California)",
+			"Immersion 2011 White (California)",
+			"Esser Cellars 2005 Zinfandel (California)",
+			"Bodegas Virgen del \u00c1guila 2010 Circles Syrah & Garnacha Syrah-Grenache (Cari\u00f1ena)",
+			"Campus Oaks 2012 Chardonnay (Lodi)",
+			"Alfasi 1998 Reserve Merlot (Maule Valley)",
+			"Condado de Oriza 2007  Ribera del Duero",
+			"Arrow Creek 2005 Vintner's Selection Cabernet Sauvignon (California)",
+			"J. Garcia Carrion 1997 Anta\u00f1o Crianza  (Rioja)",
+			"Pueblo del Sol 2009 Tannat (Juanico)",
+			"Bodegas Valdemar 2010 Conde de Valdemar Rosado Ros\u00e9 (Rioja)",
+			"Bodegas Medina 2011 Jaloco Rosado Ros\u00e9 (Ribera del Guadiana)",
+			"Canoas 2011 Estate Collection Syrah (San Juan)",
+			"Fat Gaucho 2011 Malbec (Mendoza)",
+			"Pessimist 2012 Cabernet Sauvignon (California)",
+			"Torito Bravo NV Sweet Chardonnay-Moscato White (Spain)",
+			"Caligiore 2007 Grazioso Chardonnay-Torrontes White (Mendoza)",
+			"Ku D\u00e9 Ta 2006 Malbec (Mendoza)",
+			"Mureda 2014 Organic Sauvignon Blanc (Vino de la Tierra de Castilla)",
+			"Bodegas San Valero 2014 Particular White (Cari\u00f1ena)",
+			"Georges Duboeuf 2001 Vin de Pays de l'Ardeche Viognier (France)",
+			"Uni\u00f3n Vin\u00edcola del Este NV Vega Medien Brut Ros\u00e9 Garnacha (Cava)",
+			"California's Jewel 2004 Old Vine Zinfandel (Lodi)",
+			"Tenimenti Montagnana 2014 Rubentino  (Montepulciano d'Abruzzo)",
+			"Arauco 2011 Merlot (Central Valley)",
+			"Concannon 2008 Selected Vineyards Merlot (Central Coast)",
+			"Bodegas Corellanas 2011 Vi\u00f1a Rubican Ros\u00e9 (Navarra)",
+			"Alfredo Roca 2006 Chardonnay",
+			"Ca' Momi 2007 Rosso Di California Red (California)",
+			"oops 2011 Carmen\u00e8re (Central Valley)",
+			"Ironstone 2007 Sauvignon Blanc (California)",
+			"Soleau 2008 Viognier (Sierra Foothills)",
+			"Santa Ema 2012 Select Terroir Sauvignon Blanc (Maipo Valley)",
+			"Tussock Jumper 2011 Moscato (Valencia)",
+			"Snapping Turtle 2011 Merlot (California)",
+			"Familia Monta\u00f1a 2015 Monta\u00f1a Tinto  (Rioja)",
+			"T 2015  Toro",
+			"Gran Familia 2011  Rioja",
+			"Rai 2013 Sauvignon Blanc (Central Valley)",
+			"Stella Mia NV Rosso e Dolce Brachetto (Italy)",
+			"Quara 2012 Estate Bottled Cabernet Sauvignon (Cafayate)",
+			"Baroncini 1998 Le Mandorlae  (Morellino di Scansano)",
+			"Bodega Beleluin 2011 Amadeo Viura (Rioja)",
+			"Kitchen Sink NV Chardonnay (California)",
+			"McManis 2007 Zinfandel (California)",
+			"Hess 2007 Sauvignon Blanc (Lake County)",
+			"Bodegas Fari\u00f1a 2009 Dama de Toro Malvasia (Toro)",
+			"Bougrier 2015 Gamay-Grolleau  (Ros\u00e9 d'Anjou)",
+			"Emiliana 2009 Natura Gew\u00fcrztraminer (Rapel Valley)",
+			"San Pedro 2011 Epica Cabernet Sauvignon (Central Valley)",
+			"San Pedro 2011 Epica Red (Central Valley)",
+			"Mont Tauch 1998 Red (Fitou)",
+			"Marcus James 2000 Chardonnay (Mendoza)",
+			"Valentin Bianchi 2001 Elsa Chardonnay (San Rafael)",
+			"Evoh\u00e9 2011 Con Batonage Garnacha Blanca (Vino de la Tierra del Bajo Arag\u00f3n)",
+			"Finca Patagonia 2015 Expedicion Chardonnay (Maule Valley)",
+			"Agust\u00edn Cubero 2013 Unus Old Vine Garnacha (Calatayud)",
+			"Buzzard Tree 2005 Zinfandel (Paso Robles)",
+			"Inkling 2012 Cabernet Sauvignon (Paso Robles)",
+			"Alfredo Roca 2007 Sauvignon Blanc",
+			"Red Knot 2007 Shiraz (South Australia)",
+			"William Cole 2014 Albamar Chardonnay (Casablanca Valley)",
+			"Tortoise Creek 2011 Schoolhouse Cuv\u00e9e Merlot (Clarksburg)",
+			"Fabre Montmayou 2012 Phebus Torront\u00e9s (Mendoza)",
+			"Pessimist 2012 Chardonnay (California)",
+			"Zolo 2008 Viognier (Mendoza)",
+			"Valentin Bianchi 2009 Famiglia Bianchi Sauvignon Blanc",
+			"Portal Del Alto 2000 Gran Reserva Chardonnay (Maipo Valley)",
+			"Peirano 2012 The Heritage Collection Malbec (Lodi)",
+			"Peirano 2012 The Heritage Collection Petite Sirah (Lodi)",
+			"Ernesto Catena 2014 Padrillos Malbec (Mendoza)",
+			"Michel Torino 2014 Ros\u00e9 (Calchaqu\u00ed Valley)",
+			"Domaines Barons de Rothschild (Lafite) 2008 Los Vascos Ros\u00e9 (Colchagua Valley)",
+			"Pascual Toso 2007 Torront\u00e9s (Maip\u00fa)",
+			"Domaine Jean Bousquet 2007 Ros\u00e9 Malbec-Cabernet Sauvignon (Tupungato)",
+			"Dancing Bull 2005 Zinfandel (California)",
+			"Fattoria Giuseppe Savini 2011 Rondineto Merlot (Colli Aprutini)",
+			"Bodega Cuarto Dominio 2012 Lote 44 Pinot Grigio (Mendoza)",
+			"Bohigas 2000 Chardonnay (Catalonia)",
+			"Castel Grisch 2007 Chancellor (Finger Lakes)",
+			"Woomera 2006 Chardonnay (South Eastern Australia)",
+			"Gardel 2009 Torront\u00e9s (Mendoza)",
+			"Alma del Sur 2009 Colecci\u00f3n Cabernet Sauvignon-Malbec (Mendoza)",
+			"Peirano 2009 The Other Red (Lodi)",
+			"Familia Cassone 2011 Finca La Florencia Cabernet Sauvignon (Mendoza)",
+			"Fog Hill NV Red (Napa County)",
+			"Insatiable 2011 Cabernet Sauvignon (Lodi)",
+			"BookCliff NV Lucky Twenty White (Colorado)",
+			"Root1 2009 Chardonnay (Casablanca Valley)",
+			"Vi\u00f1a Bisquertt 2008 La Joya Reserve Viognier (Colchagua Valley)",
+			"Indomita 2009 Selected Varietal Merlot (Maipo Valley)",
+			"Argana 2010 Cabernet Sauvignon (Mendoza)",
+			"Conquista 2013 Oak Cask Red (Mendoza)",
+			"Renwood 2007 Red Label Zinfandel (Sierra Foothills)",
+			"Tres Exilios 2012 Bonarda (Mendoza)",
+			"Masterpiece 2012 Cabernet Sauvignon (Russian River Valley)",
+			"Cedar Mountain 2008 Blanche's Vineyard Sauvignon Blanc (Livermore Valley)",
+			"Viniterra 2007 Malbec (Mendoza)",
+			"Reyter 2009 Finca La Martina Chardonnay (Mendoza)",
+			"Chaddsford 2007 Proprietor's Reserve White (Pennsylvania)",
+			"Congress Springs 2006 Pinot Noir (California)",
+			"Fair Hare NV Cabernet Sauvignon (North Coast)",
+			"Capay Valley 2011 Viognier (Capay Valley)",
+			"Zinsane 2011 Zinfandel (Lodi)",
+			"Espuela del Gaucho 2012 Gaucho Spur Cabernet Sauvignon (Mendoza)",
+			"Silver Cap NV Blanc de Blancs Brut Sparkling (Vin Mousseux)",
+			"Cultivate 2011 Copa Cabana Cabernet Sauvignon-Carmen\u00e8re (Central Valley)",
+			"Espuela del Gaucho 2011 Gaucho Spur Malbec (Mendoza)",
+			"Tres Exilios 2013 Chardonnay (Mendoza)",
+			"Dominio de la Vega 2010 Bobal (Utiel-Requena)",
+			"Baron Herzog 2009 Old Vine Zinfandel (Lodi)",
+			"De Martino 1999 Prima Reserva Merlot (Maipo Valley)",
+			"Maray 2013 Reserva Sauvignon Blanc (Limar\u00ed Valley)",
+			"Fran\u00e7ois Lurton 2008 Hacienda Araucano Carmen\u00e8re (Colchagua Valley)",
+			"L.A. Cetto 2013 Chenin Blanc (Valle de Guadalupe)",
+			"Chono 2012 Single Vineyard Cabernet Sauvignon (Maipo Valley)",
+			"Bocage 2006 Merlot (Monterey)",
+			"Korbel NV Rouge  (Sonoma County)",
+			"Vega Murillo 2008  Toro",
+			"Conde de Subirats NV Brut Sparkling (Cava)",
+			"Vega de Tera 2014 Halcon Verdejo (Vino de la Tierra de Castilla y Le\u00f3n)",
+			"Nine x Nine 2006 Old Vine Zinfandel (Lodi)",
+			"Conde de Vel\u00e1zquez 2006 El Conde Gran Reserva Syrah (Aconcagua Valley)",
+			"Villa Vi\u00f1a 2006 Torront\u00e9s (Salta)",
+			"Casas del Toqui 2015 Barrel Series Reserva Pinot Noir (Cachapoal Valley)",
+			"Arrocal 2015 Rosa de Arrocal Ros\u00e9 (Ribera del Duero)",
+			"Cinco Sentidos 2009 Chardonnay (Mendoza)",
+			"Heavyweight 2009 \u201cChamp\u201d Jim the Gent Cabernet Sauvignon (California)",
+			"Amity 1999 Eco Wine Cattrall Brothers Pinot Noir (Oregon)",
+			"Paul Cheneau NV Demi Sec Sparkling (Cava)",
+			"Luis Felipe Edwards 2006 Family Selection Malbec (Colchagua Valley)",
+			"Fabre Montmayou 2005 Phebus Reserva Malbec (Mendoza)",
+			"Teillery 2014 Organic Cabernet Sauvignon (Maipo Valley)",
+			"Ochoa 2011 Viura Chardonnay White (Navarra)",
+			"Cave de Ribeauvill\u00e9 NV Giersberger Brut Sparkling (Cr\u00e9mant d'Alsace)",
+			"Viu Manent 2012 Gran Reserva Malbec (Colchagua Valley)",
+			"Hollen Family Vineyards 2008 Bonarda (Mendoza)",
+			"Teillery 2014 Organic Carmen\u00e8re (Maipo Valley)",
+			"Campo Marin 2006 Selecci\u00f3n Crianza Red (Cari\u00f1ena)",
+			"Montelle 2008 Chambourcin (Missouri)",
+			"Ignacio Mar\u00edn 2008 Duque de Medina Reserva Old Vine Garnacha (Cari\u00f1ena)",
+			"Quintay 2013 Clava Reserve Carmen\u00e8re (Rapel Valley)",
+			"Stanburn 2011 Chardonnay (Virginia)",
+			"Aromal 2008 Verdejo (Rueda)",
+			"Pietra Santa 2004 Merlot (Cienega Valley)",
+			"Stanburn 2011 Bull's Blush Ros\u00e9 (Virginia)",
+			"Pradorey 2016 Tempranillo-Merlot Fermentado en Barrica Rosado (Ribera del Duero)",
+			"Fr\u00e9d\u00e9ric Mallo 2014 Special Delivery Pinot Blanc (Alsace)",
+			"Clayhouse 2006 Cabernet Sauvignon (Paso Robles)",
+			"Estancia Piedra 2007 Rosado Ros\u00e9 (Toro)",
+			"Bodega Carmine Granata NV Pinot Noir (Mendoza)",
+			"Flock by Smoking Loon 2007 Merlot (Napa Valley)",
+			"Tacama 2010 Brut Sparkling (Ica)",
+			"Fioravante 2008 Reserva Malbec (Mendoza)",
+			"Ricardo Santos 2009 S\u00e9millon (Mendoza)",
+			"Namast\u00e9 Vineyards 2006 Serenity Vineyard Chardonnay (Willamette Valley)",
+			"Finnegan's Lake 2007 Fin Cabernet Sauvignon (California)",
+			"Haarth 2013 Made With Organic Grapes Cabernet Sauvignon (Argentina)",
+			"Idrias 2011 Chardonnay (Somontano)",
+			"M\u00e4nnle 2012 Reserva Carmen\u00e8re (Itata Valley)",
+			"Lamadrid 2014 Single Vineyard Cabernet Sauvignon (Agrelo)",
+			"Casa Perini 2015 Macaw Soft Tannat (Serra Ga\u00facha)",
+			"Vi\u00f1a Santa Marina 2012 Merlot Rosado (Extremadura)",
+			"Luminis 2012 Cabernet Sauvignon (Luj\u00e1n de Cuyo)",
+			"Sharabella Wines 2008 Padre Amante Reserve Cabernet Sauvignon (Lodi)",
+			"Caligiore 2006 Reserve Syrah (Mendoza)",
+			"Finca Pasi\u00f3n 2009 Mi Fuego Syrah (Mendoza)",
+			"Ronan 2005 Lakeview Vineyards Zinfandel (Monterey County)",
+			"Estancia 2005 Cabernet Sauvignon (Paso Robles)",
+			"Arrocal 2014 Rosa de Arrocal Ros\u00e9 (Ribera del Duero)",
+			"Staphyle 2008 V\u00e1stago de Gea Cabernet Sauvignon (Luj\u00e1n de Cuyo)",
+			"Pacific Oasis 2005 Chardonnay (Santa Barbara County)",
+			"Hermes 2006 Estate Bottled Nebbiolo (Ohio)",
+			"M\u00e4nnle 2012 Chardonnay (Itata Valley)",
+			"Cuevas del Sur 2010 Reserve Chardonnay (Maule Valley)",
+			"LangeTwins 2010 Estate grown Malbec (Lodi)",
+			"Vinisterra 2011 Domin\u00f3 Cinsault (San Antonio de las Minas Valley)",
+			"Corinto 2009 Selection Syrah (Central Valley)",
+			"Montelle 2008 Dry Vignoles (Missouri)",
+			"Andeluna 2015 1300 Chardonnay (Valle de Uco)",
+			"Willow Creek 2000 Pinot Noir (Canterbury)",
+			"Piattelli 2010 Premium Ros\u00e9 of Malbec Ros\u00e9 (Luj\u00e1n de Cuyo)",
+			"Casa Tiene Vista 2012 City Lights Chardonnay (California)",
+			"Santa Alicia 2015 Gran Reserva Chardonnay (Maipo Valley)",
+			"Stacked Stone 2004 The Gem Red (Paso Robles)",
+			"Tapiz 2006 Merlot (Mendoza)",
+			"Rooster Hill 2007 Estate Gew\u00fcrztraminer (Finger Lakes)",
+			"Rooster Hill 2007 Dry Riesling (Finger Lakes)",
+			"Ardales 2008 Organic Tempranillo (Vino de la Tierra de Castilla)",
+			"Fiesta Winery NV Skinny Dippin White (Texas)",
+			"3 Horse Ranch Vineyards 2014 Ros\u00e9",
+			"Maddalena 2010 Pinot Grigio (Monterey)",
+			"Marichal 2012 Premium Varietal Chardonnay (Canelones)",
+			"Torre Oria NV Brut Nature Sparkling (Cava)",
+			"Kuentz-Bas 2014 Tradition Pinot Blanc (Alsace)",
+			"Bodega Carmine Granata 2009 S\u00e9millon (Mendoza)",
+			"Agate Ridge 2007 Cascade Terrace Red Red (Rogue Valley)",
+			"Enate 2013 234 Chardonnay (Somontano)",
+			"Sembro 2012 Vendimia Seleccionada  (Ribera del Duero)",
+			"Ronan 2005 Lakeview Vineyards Syrah (Monterey County)",
+			"Viejo Isaias 2013 Malbec Ros\u00e9 (Mendoza)",
+			"Reula 2003 Oak Aged Tempranillo-Merlot (Cari\u00f1ena)",
+			"Trapiche 2006 Broquel Pinot Noir (Mendoza)",
+			"Hom NV Ros\u00e9 Malbec (Mendoza)",
+			"Kuentz-Bas 2014 Tradition Pinot Blanc (Alsace)",
+			"Cooper Vineyards NV Noche Sweet Table Wine Red (Virginia)",
+			"Abad Dom Bueno 2007 Godello (Bierzo)",
+			"Paschal 2001 Pinot Gris (Rogue Valley)",
+			"Loken Cellars NV Reserve Lot 14 Ros\u00e9 (California)",
+			"Pietra Santa 2004 Dolcetto (Cienega Valley)",
+			"Mission Trail 2006 Syrah (Monterey County)",
+			"Domaine de la Tour Blanche 2014 Pinot Blanc (Alsace)",
+			"Finca El Origen 2007 Gran Reserva Malbec (Uco Valley)",
+			"Quickfire 2008 Top Chef Merlot (Napa Valley)",
+			"Elizabeth Rose 2007 Sauvignon Blanc (Napa Valley)",
+			"Greenwood Ridge 2007 Sauvignon Blanc (Anderson Valley)",
+			"Ventisquero 2012 Queulat Single Vineyard Gran Reserva Sauvignon Blanc (Leyda Valley)",
+			"Brutocao 2005 Feliz Vineyard Barbera (Mendocino)",
+			"Rosa d'Oro 2007 Dolcetto (Lake County)",
+			"Tucannon 2014 Cabernet Franc Ros\u00e9 (Columbia Valley (WA))",
+			"Laurel Lake 1998 Reserve Chardonnay (North Fork of Long Island)",
+			"Bodega Rolland 2013 Mariflor Michel Rolland Sauvignon Blanc (Mendoza)",
+			"Arrow Creek 2011 Coastal Series Cabernet Sauvignon (California)",
+			"Four Vines 2005 Syrah (Paso Robles)",
+			"Mission Trail 2006 Syrah (Monterey County)",
+			"Pietra Santa 2009 Estate Grown Pinot Noir (Cienega Valley)",
+			"Pietra Santa 2009 Estate Grown Pinot Noir (Cienega Valley)",
+			"Ektimo Vineyards 2013 Sauvignon Blanc (Bennett Valley)",
+			"Vi\u00f1a Tarapac\u00e1 2015 Gran Reserva Chardonnay (Leyda Valley)",
+			"Kirkland Signature 2013 Signature Series Mountain Cuvee Cabernet Sauvignon (Napa Valley)",
+			"Vina Robles 2004 Cabernet Sauvignon (Paso Robles)",
+			"Eleusis 2006 Albari\u00f1o (R\u00edas Baixas)",
+			"Macari 1997 Estate Bottled Cabernet Franc (North Fork of Long Island)",
+			"Barkan 1996 Reserve Cabernet Sauvignon (Galil)",
+			"Sawyer 2007 Estate Sauvignon Blanc (Rutherford)",
+			"SignoSeis 2012 The Angel Oak Ros\u00e9 (Valle de Uco)",
+			"Cruzat NV Cl\u00e1sico Brut  (Mendoza)",
+			"La Val 2016 M\u00e1s Que 2 White (R\u00edas Baixas)",
+			"Rosa d'Oro 2008 Estate Grown Barbera (Clear Lake)",
+			"Beronia 2007 Elaboraci\u00f3n Especial  (Rioja)",
+			"Finca Constancia 2007 Red (Vino de la Tierra de Castilla)",
+			"Vi\u00f1edos Altamira Valley 2011 VAV Malbec (Valle de Uco)",
+			"Bota Box 2011 Moscato (Mendoza)",
+			"La Cave des Vignerons de Pfaffenheim 2009 Pinot Noir (Alsace)",
+			"Ribas del C\u00faa 2004 Crianza Menc\u00eda (Bierzo)",
+			"Gran Castillo Royal 2012 Verdejo (Vino de la Tierra de Castilla)",
+			"Barra of Mendocino 2011 Pinot Noir (Mendocino)",
+			"Fiesta Winery NV Side Saddle White (Texas)",
+			"Spann Vineyards 2004 Mo Zin Red (Sonoma County)",
+			"Gatos Locos 2007 Chardonnay (Mokelumne River)",
+			"Cruz Alta 2007 Grand Reserve Malbec (Mendoza)",
+			"Chronic Cellars 2006 Sofa King Bueno Red (Paso Robles)",
+			"Lidio Carraro 2010 Da'divas Chardonnay (Vale dos Vinhedos)",
+			"Graffigna 2005 Grand Reserve Malbec (San Juan)",
+			"Ch\u00e2teau Timberlay 2009  Bordeaux Sup\u00e9rieur",
+			"Fran\u00e7ois Lurton 2006 Gran Lurton Cabernet Sauvignon (Mendoza)",
+			"James Wyatt 2013 Merlot (Horse Heaven Hills)",
+			"Lost Oak 2015 Bingham Family Vineyard Viognier (Texas High Plains)",
+			"Finca Don Carlos 2011 Calathus Roble Chardonnay (Uco Valley)",
+			"Villa Toscano 2010 Erika's Reserve Zinfandel (Shenandoah Valley (CA))",
+			"Peju 2011 Sauvignon Blanc (Napa Valley)",
+			"Gran Verano 2011 Gran Verano Cabernet Sauvignon (Central Valley)",
+			"Star Lane Vineyard 2012 Estate Grown Sauvignon Blanc (Happy Canyon of Santa Barbara)",
+			"Antonio Gonzalez 2012 Galan Reserva Cabernet Sauvignon (Mendoza)",
+			"Michael David 2005 Petite Petit Red (Lodi)",
+			"Longevity 2005 Merlot (Sierra Foothills)",
+			"Hatcher 2005 Sewell Red (Calaveras County)",
+			"Moss Roxx 2010 Ancient Vine Zinfandel (Lodi)",
+			"Michel Picard 2007  Sancerre",
+			"Honora NV Cabernet Sauvignon (America)",
+			"Fenestra 2007 Silvaspoons Vineyards Touriga Nacional (Lodi)",
+			"Jigar 2009 Zinfandel (Dry Creek Valley)",
+			"Zudugarai 2015 Hondarrabi Zuri (Getariako Txakolina)",
+			"Santa Barbara Winery 2008 Stolpman Vineyard Sangiovese (Santa Ynez Valley)",
+			"Bloomfield 2008 Chardonnay (Contra Costa County)",
+			"Lions Peak 2002 Late Harvest Viognier (California)",
+			"Monte De Oro 2009 Cuvee de Oro Red (Temecula Valley)",
+			"Black Box 2011 Malbec (Mendoza)",
+			"Ch\u00e2teau Majoureau 2009 Hyppos  (Bordeaux Sup\u00e9rieur)",
+			"Miolo 2009 Cuv\u00e9e Giuseppe Chardonnay (Vale dos Vinhedos)",
+			"Domaine Bernhard & Reibel 2014 Hahnenberg Pinot Gris (Alsace)",
+			"Arger-Martucci 2006 Viognier (Russian River Valley)",
+			"Black Box 2012 Sauvignon Blanc (Central Valley)",
+			"Santa Alicia 2010 Edici\u00f3n Limitada Gran Reserva de Los Andes Pinot Noir (Casablanca Valley)",
+			"Moss Roxx 2011 Ancient Vine Zinfandel (Lodi)",
+			"Chozas Carrascal 2004 Las Ocho Red (Utiel-Requena)",
+			"San Simeon 2009 Syrah (Paso Robles)",
+			"Bloomfield 2008 Devil's Daughter White (Contra Costa County)",
+			"3 Steves Winery 2008 Reserve Cabernet Sauvignon (Livermore Valley)",
+			"Oriol Rossell NV Gran Reserva Brut Nature Sparkling (Cava)",
+			"Eric Ross 2007 Saralee's Vineyard Marsanne-Roussanne (Russian River Valley)",
+			"Midnight 2006 Estate Reserve Chardonnay (Paso Robles)",
+			"McGregor 2006 Pinot Noir (Finger Lakes)",
+			"Highland Hills Winery 2011 Lola Red (Ramona Valley)",
+			"Midnight 2006 Estate Reserve Chardonnay (Paso Robles)",
+			"South Coast 2005 Wild Horse Peak Mountain Vineyards 4-Block Blend Cabernet Sauvignon (South Coast)",
+			"Sunstone 2007 Syrah Ros\u00e9 (Santa Ynez Valley)",
+			"Del Rio 2007 Pinot Noir (Rogue Valley)",
+			"Pianetta 2004 Cabernet Sauvignon (Monterey)",
+			"Tin Barn 2010 Los Chamizal Vineyard Zinfandel (Sonoma Valley)",
+			"Tin Barn 2003 Tombs Creek Vineyard Cabernet Sauvignon (Sonoma County)",
+			"O. Fournier 2002 Spiga  (Ribera del Duero)",
+			"Estrella Creek 2005 Petite Sirah (Paso Robles)",
+			"Wise Villa 2011 Zinfandel (California)",
+			"Wise Villa 2011 Tempranillo (Sierra Foothills)",
+			"Convento San Francisco 2008  Ribera del Duero",
+			"Reyes NV White Delight White (Sierra Pelona Valley)",
+			"Fallbrook 2004 Special Selection Syrah (Central Coast)",
+			"Rezonja 2005 Cabernet Sauvignon (Alexander Valley)",
+			"Loma Larga 2011 Brut Nature Limited Edition Cabernet Franc (Casablanca Valley)",
+			"Peter Cellars 2011 Carneros Estate Pinot Noir (Carneros)",
+			"Angosto 2011 Blanco White (Valencia)",
+			"Rosati Family 2007 Cabernet Sauvignon (Mendocino County)",
+			"Cono Sur 2009 20 Barrels Limited Edition Pinot Noir (Casablanca Valley)",
+			"Muscardini 2009 Gracie Creek Vineyards Syrah (Sonoma Valley)",
+			"Finca La Anita 2007 Sin Madera Petit Verdot (Mendoza)",
+			"Calcareous 2009 Cabernet Sauvignon (York Mountain)",
+			"Cantara 2007 Petite Sirah (Lodi)",
+			"Jack Creek 2011 Kruse Vineyards Chardonnay (Central Coast)",
+			"Bryter 2009 Hayley Vineyard Pinot Noir (Anderson Valley)",
+			"Ideology Cellars 2012 Proprietary Blend Syrah-Cabernet Sauvignon (Napa Valley)",
+			"Four Vines 2005 The Peasant Red (Paso Robles)",
+			"Mission Trail 2005 Friars' Vineyard Garnacha (Monterey County)",
+			"French Hill 2006 Grand Reserve Petit Verdot (California)",
+			"Vivencias 2008 V Tempranillo (Vino de Calidad de Valtiendas)",
+			"Arrowhead Mountain 2008 Primary Red (Sonoma Valley)",
+			"Spann Vineyards 2004 Twenty-Three Barrels Mo Jo Red (Sonoma County)",
+			"Finca Valpiedra 2008 Reserva  (Rioja)",
+			"Watts 2004 Watts Vineyard Cabernet Franc (Lodi)",
+			"Vindemia 2006 Commonwealth Red (South Coast)",
+			"Catharine Valley 2005 Reserve Cabernet Franc (Finger Lakes)",
+			"Opolo 2011 Reserve Zinfandel (Paso Robles)",
+			"Mill\u00e9sim\u00e9 2008 Scopire Red (Santa Ynez Valley)",
+			"Casa Tiene Vista NV DeLuz Red (California)",
+			"Mill\u00e9sim\u00e9 2005 Scoprire Red (California)",
+			"Grgich Hills 2004 Miljenko's Old Vines Zinfandel (Napa Valley)",
+			"Quinta do Pinto 2008 Touriga Nacional (Lisboa)",
+			"Cantine Benedetti 2008 Corte Antica  (Valpolicella Classico Superiore)"
+		]		
+		,
+		"cheapest wine":
+		[			
+			"Pam's Cuties NV Unoaked Chardonnay (California)",
+			"Bandit NV Merlot (California)",
+			"Felix Solis 2013 Flirty Bird Syrah (Vino de la Tierra de Castilla)",
+			"Dancing Coyote 2015 White (Clarksburg)",
+			"Bandit NV Merlot (California)",
+			"Terrenal 2010 Cabernet Sauvignon (Yecla)",
+			"Cramele Recas 2011 UnWineD Pinot Grigio (Viile Timisului)",
+			"Terrenal 2010 Estate Bottled Tempranillo (Yecla)",
+			"Felix Solis 2012 Flirty Bird White (Vino de la Tierra de Castilla)",
+			"Broke Ass 2009 Red Malbec-Syrah (Mendoza)",
+			"Bandit NV Chardonnay (California)"
+		]		
+		,
+		"most expensive country": "Switzerland"
+	}	
+}

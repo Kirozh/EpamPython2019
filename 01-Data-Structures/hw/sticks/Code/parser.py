@@ -1,234 +1,171 @@
 import random
 import sys
 
-f = open('winedata_2.json', 'r', encoding='utf-8')
-g = open('winedata_1.json', 'r', encoding='utf-8')
+first_input_file = 'winedata_1.json'
+second_input_file = 'winedata_2.json'
 
 
-def parsing(f):
-    """ Function parsing makes parsing input file
-    f - input file
-    parsing(f) -> list(dict)
-    it returns list of dictionaries
+def parsing(file_name):
+    """ The function parses input data file and makes list of dictionaries each of whom is wine
+
+    :param file_name: input data file
+    :return: list of wine dictionaries
     """
 
-    print('starting parsing file')
-    dict_list = []
+    data_file = open(file_name, 'r', encoding='UTF-8')
 
-    stack = []  # stack contains symbols '{', '[' , '}', ", and ']'
-    c = f.read(1)
-    stack.append(c)
-
-    sigths_dict = {}  # exemplar of dictionary
-    i = 0
-
+    wine_record_list = []  # array of wine records
+    stack_of_parentheses = []  # stack contains symbols '{', '[' , '}', ", and ']'
+    c = data_file.read(1)
+    stack_of_parentheses.append(c)
+    wine_dict = {}  # exemplar of wine-info dictionary
     inside = False  # true if current symbol is in word, else false
-    key = value = []  # key and value massivs
+    key = value = ''  # key and value arrays
     key_or_value = -1  # -1 if current symbol in key , 1 if current symbol in value
-    stack_size = len(stack)
+    stack_size = len(stack_of_parentheses)
 
-    while stack_size != 0 :
-        c = f.read(1)
+    while stack_size != 0:
+        c = data_file.read(1)
 
-        if c == '[':  # statring parsing and adding [ to stack
-            if stack[-1] != '[':
-                stack.append(c)
+        if c == '[':  # startring parsing and adding [ to stack
+            if not inside:
+                if stack_of_parentheses[-1] != '[':
+                    stack_of_parentheses.append(c)
+            else:
+                value += c
 
-        if c == '{':  # new dictionary
-            stack.append(c)
+        if c == '{':  # starting of new dictionary
+            stack_of_parentheses.append(c)
             inside = False
 
-        if c == '"' and stack[-1] != '"':  # currently in word: key or value
-            stack.append(c)
+        if c == '"' and stack_of_parentheses[-1] != '"':  # this " is opening
+            stack_of_parentheses.append(c)
             inside = True
 
-            if key_or_value == -1:
-                key = []
+            if key_or_value == -1:  # this " in key
+                key = ''
 
-            value = []
+            value = ''
 
-        elif c == '"' and stack[-1] == '"':
+        elif c == '"' and stack_of_parentheses[-1] == '"':  # this " is closing
             inside = False
-            stack.pop(-1)
+            stack_of_parentheses.pop(-1)
 
-            if key_or_value < 0:
+            if key_or_value < 0:  # ending of key
                 key_or_value = 1
-            else:
+
+            else:  # ending value
                 key_or_value = -1
 
-        if key_or_value < 0 and inside and c != '"':
+        if key_or_value < 0 and inside and c != '"':  # collecting symbols to key
             if key_or_value < 0:
-                key.append(c)
+                key += c
 
-        if c == ':' and not inside:
+        if c == ':' and not inside:  # this : shares key and value
             key_or_value = 1
 
-        if c == ',' and not inside and stack[-1] == '{':
+        if c == ',' and not inside and stack_of_parentheses[-1] == '{':  # this ',' is after pair key-value
             key_or_value = -1
-            sigths_dict.update({''.join(key): ''.join(value).lstrip()})
+            if value.strip() == "null" or (value.strip().isdigit() and key != 'points'):
+                wine_dict.update({'"' + key + '"': value.lstrip()})
+            else:
+                wine_dict.update({'"'+key+'"': '"'+value.lstrip()+'"'})
 
-        if key_or_value > 0 and c != '"' and c != ':':
+        if key_or_value > 0 and c != '"' and c != ':':  # collecting symbols to value
+            value += c
 
-            value.append(c)
-
-        if c == '}':
-            stack.pop(-1)
+        if c == '}':  # ending wine-information
+            stack_of_parentheses.pop(-1)
             inside = False
-            sigths_dict.update({''.join(key): ''.join(value).lstrip()})
-            dict_list.append(sigths_dict.copy())
-            sigths_dict.clear()
+            wine_dict.update({'"'+key+'"': '"'+value.lstrip()+'"'})
+            wine_record_list.append(wine_dict.copy())
 
-        if c == ']':
-            stack.pop(-1)
+            wine_dict.clear()
 
-        stack_size = len(stack)
+        if c == ']':  # ending list of wines
+            if not inside:
+                stack_of_parentheses.pop(-1)
+            else:
+                value += c
 
-    return dict_list
+        stack_size = len(stack_of_parentheses)
 
-
-def merging(dictionary_list_1, dictionary_list_2):
-    """
-    merging two lists
-    :param dictionary_list_1:
-    :param dictionary_list_2:
-    :return: list
-    """
-    temp_list = dictionary_list_1.copy()
-    temp_list.extend(dictionary_list_2)
-    return temp_list
+    data_file.close()
+    return wine_record_list
 
 
-def sort_wine_by_price(dList):
-    """
-    def sort_wine_by_price(dList) -> dList
-    function get list of dictionaries, throwes null-prices in the end and sorts remainings
-    dList - list of dictionaries
-    """
-    print('starting sort_wine_by_price')
-    print(type(dList))
-    length = len(dList)
-
-    tempList = dList.copy()
-
-    # counting null-prices
-
-    count_null = 0
-    for x in dList:
-        if x['price'] == 'null':
-            count_null += 1
-
-    i = 0
-
-    # pushing null-price-dictionaries to the end
-
-    while i < length-count_null:
-
-        j = i
-        x = dList[j].copy()
-        if x['price'] == 'null':
-
-            x = dList[j+1].copy()
-
-            if x.get('price') != 'null':
-
-                i += 1
-
-            temp_dict = dList.pop(j).copy()
-
-            dList.append(temp_dict.copy())
-
-        else:
-            i += 1
-
-    # sorting prices
-
-    i = 1
-    while i < length-count_null:
-        temp_dict = {}
-        temp_dict.update(dList[i].items())
-
-        j = i
-
-        while (j > 0 and int(dList[j-1].get('price')) < int(temp_dict.get('price'))):
-            dList[j].clear()
-            dList[j].update(dList[j-1].items())
-
-            j -= 1
-        dList[j].clear()
-        dList[j].update(temp_dict)
-        i += 1
-    return dList
+# def merging(d_list_1, d_list_2):
+#     """ the function merges two lists
+#     :param d_list_1: input list of dictionaries
+#     :param d_list_2: input list of dictionaries
+#     :return: merged list
+#
+#     """
+#
+#     temp_list = d_list_1.copy()
+#     temp_list.extend(d_list_2)
+#     return temp_list
 
 
-def find_duplicate(dictionary_list_1, dictionary_list_2):
-    """
-    def find_duplicate(dict_list_1, dict_list_2) -> merged_list
-    function gets two lists of dictionaries. It runs along first list
-        and tries to find identical dictionary in another dict_list
+def find_duplicate(d_list_1, d_list_2):
+    """ The function gets two lists of dictionaries. It runs along first list
+        and tries to find identical dictionary in another list
     finally, it merges two lists in merged_list
+
+    :param d_list_1: input list of dictionaries
+    :param d_list_2: input list of dictionaries
+    :return: merged list
+
     """
-    print('starting find_duplicate')
-    merged_list = []
-    for x in dictionary_list_1:
-        length_file_2 = len(dictionary_list_2)
+
+    for x in d_list_1:
+        length_file_2 = len(d_list_2)
         i = 0
-
-        while i < length_file_2 and x.values() != dictionary_list_2[i]:
+        while i < length_file_2 and x.values() != d_list_2[i].values():  # while two simular dictionaries won`t be found
             i += 1
-
         if i != length_file_2:
-            print(dictionary_list_2.pop(i))
+            print(d_list_2.pop(i))
 
-    merged_list = dictionary_list_1.copy()
-    merged_list.extend(dictionary_list_2)
-    print(len(merged_list))
-    return merged_list
-
-
-def find_duplicate_temp(dictionary_list_1, dictionary_list_2):
-    """
-        temp function finds duplicates
-    """
-    temp_merged_list = dictionary_list_1.copy()
-    temp_merged_list.extend(dictionary_list_2)
-    merged_set = set(temp_merged_list)
-    merged_list = list(merged_set)
-    print(len(merged_list))
+    merged_list = d_list_1.copy()
+    merged_list.extend(d_list_2)
     return merged_list
 
 
 def count_null_(merged_list):
-    """
-        def count_null(merged_list) -> int
-        finds num of null-prices in merged list
+    """ The function finds number of null-prices-wines in merged list
+    :param merged_list:
+    :return: number of null-prices-wines
+
     """
     count_null = 0
 
     for x in merged_list:
-        if x['price'] == 'null':
-            count_null += 1
+            if x.get('"price"') == 'null':
+                count_null += 1
 
     return count_null
 
 
 def push_null_in_the_end(merged_list):
+    """ The function pushes dictionaries with null-price-wines to the end of list
+    
+    :param merged_list: input merged list
+    :return: modified merged list
+
     """
-    def push null in the end(merged_list) -> merged list
-    pushes dictionaries with null - price to the end
-    """
+
     count_null = count_null_(merged_list)
     i = 0
     length = len(merged_list)
 
     # push null-price-dictionaries to the end
     while i < length - count_null:
-
         j = i
         x = merged_list[j].copy()
-        if x['price'] == 'null':
+        if x['"price"'] == 'null':
             x = merged_list[j + 1].copy()
 
-            if x.get('price') != 'null':
+            if x.get('"price"') != 'null':
                 i += 1
 
             temp_dict = merged_list.pop(j).copy()
@@ -248,15 +185,16 @@ sorting merged list by Quick sort algorithm
 
 def quick_sort(merged_list, fst, lst):
 
-    if fst >= lst: return
+    if fst >= lst:
+        return
 
     i, j = fst, lst
     pivot = merged_list[random.randint(fst, lst)]
 
     while i <= j:
-        while int(merged_list[i].get('price')) < int(pivot.get('price')):
+        while int(merged_list[i].get('"price"')) < int(pivot.get('"price"')):
             i += 1
-        while int(merged_list[j].get('price')) > int(pivot.get('price')):
+        while int(merged_list[j].get('"price"')) > int(pivot.get('"price"')):
             j -= 1
         if i <= j:
 
@@ -267,73 +205,67 @@ def quick_sort(merged_list, fst, lst):
     quick_sort(merged_list, i, lst)
 
 
-def merge_sorted_by_price_JSON(dictionary_list_1, dictionary_list_2):
-    """
-    :param dictionary_list_1:
-    :param dictionary_list_2:
-    :return:
-    """
-    print('starting merge_sorted_by_price')
-
-    return sort_wine_by_price(find_duplicate(dictionary_list_1.copy(), dictionary_list_2.copy()))
-
-
 def wine_sort_information(sort, merged_lists):
-    """
-    wine sort information(sort, merged list) -> dict()
-    function get sort of wine and returns sort`s information:
+    """ The function get sort of wine and returns sort`s information:
     - max price
     - min price
-    - most common country / region
+    - most common country
+    - most common region
     - average price
     - score
+
+    :param sort: name of wine sort
+    :param merged_lists: input list of wine`s records
+    :return:
+
     """
 
-    print('starting wine sort information')
     average_price = 0
     price = 0
-    min_price = 10000
+    min_price = sys.float_info.max
     max_price = -1
-
     average_score = 0
     score = 0
     sort_count = 0
-
-    countries = {}
-
-    regions = {}
+    countries = {}  # dictionary of counties where the sort was produced and matched to them numbers
+    regions = {}  # dictionary of regions where the sort was produced and matched to them numbers
 
     for x in merged_lists:
-        if x['variety'] == sort:
+        # if x['variety'] == sort:
+        if x['"variety"'].find(sort) != -1 or (x.get('"title"') is not None and x['"title"'].find(sort) != -1):
+            # if sort was mentioned in title or in variety
+
             sort_count += 1
-            if x['price'] != 'null':
-                price += int(x['price'])
-                if int(x['price']) < min_price:
-                    min_price = int(x['price'])
-                if int(x['price']) > max_price:
-                    max_price = int(x['price'])
-            cur_country = x['country']
+            if x['"price"'] != 'null':  # if price isn`t null, checking if it is max or min
+                price += int(x['"price"'])
+                if sort_count == 1:  # Because merged list has already been sorted
+                    min_price = int(x['"price"'])
+                if int(x['"price"']) > max_price:
+                    max_price = int(x['"price"'])
+
+            cur_country = x['"country"']  # searching for most coomon countries
             if cur_country != 'null':
-                if countries.get(cur_country) is None:
-                    countries.update({x['country']: 1})
-                else:
-                    countries.update({x['country']: int(countries[cur_country]) + 1})
+                if countries.get(cur_country) is None:  # if the country haven`t been in country dictionary
+                    countries.update({x['"country"']: 1})
+                else:  # if already have this country in dictionary
+                    countries.update({x['"country"']: int(countries[cur_country]) + 1})
 
-            cur_region = x['region_1']
+            cur_region = x['"region_1"']  # searching for most common region
+            if cur_region != 'null':
+                if regions.get(cur_region) is None:  # if the region haven`t been in region dictionary
+                    regions.update({x['"region_1"']: 1})
+                else:
+                    regions.update({x['"region_1"']: int(regions[cur_region]) + 1})
+
+            cur_region = x['"region_2"']
             if cur_region != 'null':
                 if regions.get(cur_region) is None:
-                    regions.update({x['region_1']: 1})
+                    regions.update({x['"region_2"']: 1})
                 else:
-                    regions.update({x['region_1']: int(regions[cur_region]) + 1})
+                    regions.update({x['"region_2"']: int(regions[cur_region]) + 1})
 
-            cur_region = x['region_2']
-            if cur_region != 'null':
-                if regions.get(cur_region) is None:
-                    regions.update({x['region_2']: 1})
-                else:
-                    regions.update({x['region_2']: int(regions[cur_region]) + 1})
+            score += int(x['"points"'][1:-1])
 
-            score += int(x['points'])
     if sort_count != 0:
         average_price = float(price) / sort_count
         average_score = float(score) / sort_count
@@ -341,316 +273,419 @@ def wine_sort_information(sort, merged_lists):
         max_price = 0
         min_price = 0
 
-    countries_count = ''
+    max_count_country_name = ''
     max_count_countries = 0
+    # searching for most common country
     for key in countries:
         if countries[key] > max_count_countries:
             max_count_countries = countries[key]
-            countries_count = key
+            max_count_country_name = key
 
-    region_count = ''
+    max_count_region_name = ''
     max_count_regions = 0
+    # searching for most common region
     for key in regions:
         if regions[key] > max_count_regions:
             max_count_regions = regions[key]
-            region_count = key
-    print('count', sort_count)
-    print('average price: ', average_price)
-    print('min price: ', min_price)
-    print('max price: ', max_price)
+            max_count_region_name = key
+    # if the wine is not in dictionary, then no country and no region produce it
+    if max_count_countries == 0:
+        max_count_country_name = '"null"'
+    if max_count_regions == 0:
+        max_count_region_name = '"null"'
 
-    print('most common country: ', countries_count, ' - ', max_count_countries)
-    print('most common region: ', region_count,' - ' ,max_count_regions)
-    print('average score: ', average_score)
-
-    return {'average price': average_price,
-            'max price': max_price,
-            'min price': min_price,
-            'most common country': countries_count,
-            'region_count': region_count,
-            'average score': average_score
+    return {'"average price"': average_price,
+            '"max price"': max_price,
+            '"min price"': min_price,
+            '"most common country"': max_count_country_name,
+            '"most common region"': max_count_region_name,
+            '"average score"': average_score
             }
 
 
 def sorts_information(wine_sorts, merged_lists):
+    """ The function applies wine_sort_information function for each sort in wine_sorts
+    :param wine_sorts: list of wines
+    :param merged_lists: merged list
+
     """
-    def sorts_information(wine_sorts, merged_lists) -> None
-    function applies wine_sort_information function for each sort in wine_sorts
-    """
-    print('sorts information')
+    sorts_info = []  # array of information of each wine sort from 'Gewurztraminer', 'Gewürztraminer', ext...
     for wine in wine_sorts:
-        print(wine + ':')
-        wine_sort_information(wine, merged_lists)
+        sorts_info.append({wine: wine_sort_information(wine, merged_lists)})
+
+    return sorts_info
 
 
-def wine_info(merged_list):
+def search_extremum_in_dictionary(dikt, mode):
+    """ The function search for max/min value in dictionary depending on mode
+
+    :param dikt: input dictionary
+    :param mode:
+    :return:
     """
-    def wine_info(merged_lists) -> dict()
+
+    extremal_keys = []
+    extremal = 0
+    if mode == 'min':
+        extremal = sys.float_info.max
+        for x in dikt:
+            if int(dikt[x]) < extremal:
+                extremal = (dikt[x])
+                extremal_keys.clear()
+                extremal_keys.append(x)
+            elif int(dikt[x]) == extremal:
+                extremal_keys.append(x)
+    elif mode == 'max':
+        extremal = sys.float_info.min
+        for x in dikt:
+            if int(dikt[x]) > extremal:
+                extremal = (dikt[x])
+                extremal_keys.clear()
+                extremal_keys.append(x)
+            elif int(dikt[x]) == extremal:
+                extremal_keys.append(x)
+
+    return extremal_keys, extremal
+
+
+def array_to_str(array_):
+    """ The function translates input list in str if the list contains only 1 element, unless returns input list
+
+    :param array_:
+    :return:
+    """
+    if len(array_) == 1:
+        return str(array_[0])
+    else:
+        return array_
+
+
+def wine_records(merged_lists):
+    """ The functions searches for wine records
     function finds information:
     - max / min price
     - average price
     - most rated / underrated countries
+    - most_expensive_coutry
+    - cheapest_coutry
+    - most_active_commentator
+    :param merged_lists: input data list
+    :return: dictionary with records
+
     """
 
-    print('starting wine information')
-    most_expensive_wine = []
-    most_expensive = 0
-    cheapest_wine = []
-    cheapest = 100000
+    most_expensive_wine_title = [] # most expensive countries
+    most_expensive_wine_cost = 0 # most expensive cost is matched to most expensive wine title
+    cheapest_wine_title = []
+    cheapest_wine_cost = sys.float_info.max
     highest_score = 0
-    highest_score_list = []
+    highest_score_title = []  # list of wines with highest score
     lowest_score = 1000
-    lowest_score_list = []
-    country_price = {}
-    country_rating = {}
+    lowest_score_title = []  # list of wines with lowest score
+    country_price = {}  # dictionary where countries are keys and sum of prices for each country are values
+    country_price_entrances = {}  # dictionary matched to country_price where countries are keys and number of
+    # founding them in input list of dictionaries are values
+    country_rating = {}  # dictionary where countries are keys and sum of points are values
+    country_rating_entrances = {}  # dictionary matched to previous where keys are countries and values are
+    # number of entrance for eac country in input file
+    most_expensive_country_title = []
+    cheapest_country_title = []
     tasters = {}
+
     for x in merged_lists:
-        if x['taster_name'] != 'null':
-            if tasters.get(x['taster_name']) is None:
-                tasters.update({x['taster_name']: 1})
+        '''
+            Searching for most active commentator
+        '''
+        if x['"taster_name"'] != 'null':  # forming tasters` dictionary
+            if tasters.get(x['"taster_name"']) is None:
+                tasters.update({x['"taster_name"']: 1})
             else:
-                tasters.update({x['taster_name']: int(tasters[x['taster_name']]) + 1})
+                tasters.update({x['"taster_name"']: int(tasters[x['"taster_name"']]) + 1})
 
-        if x['country'] != 'null':
-            if country_price.get(x['country']) is None:
-                if x['price'] != 'null':
-                    country_price.update({x['country']: [int(x['price']), 1]})
+        if x['"country"'] != 'null':
+            ''' 
+            Searching for most expensive/cheapest countries
+            '''
+            cur_country = x['"country"']
+            if country_price.get(cur_country) is None:
+                # if current country hasn`t already been added to country_price dict
+                if x['"price"'] != 'null':
+                    country_price.update({cur_country: int(x['"price"'])})
+                    country_price_entrances.update({cur_country: 1})
             else:
-                temp_list = country_price[x['country']]
-                if x['price'] != 'null':
-                    temp_list[0] += int(x['price'])
-                    temp_list[1] += 1
-                country_price.update({x['country']: temp_list})
+                # if current country has already been added to country_price dict
+                if x['"price"'] != 'null':
+                    # summarizing wine`s cost for the country
+                    country_price.update({cur_country: int(x['"price"']) + country_price[cur_country]})
+                    # summarizing wine`s entrancenses for the country
+                    country_price_entrances.update({cur_country: country_price_entrances[cur_country] + 1})
 
-        if x['country'] != 'null':
-
-            if country_rating.get(x['country']) == None:
-                if x['points'] != 'null':
-                    country_rating.update({x['country']: [int(x['points']), 1]})
+            ''' 
+            Searching for most rated/underrated countries
+            '''
+            if country_rating.get(cur_country) is None:
+                # if current country hasn`t already been added to country_rating dict
+                if x['"points"'] != 'null':
+                    country_rating.update({cur_country: int(x['"points"'][1:-1])})
+                    country_rating_entrances.update({cur_country: 1})
             else:
-                temp_list = country_price[x['country']]
-                if x['points'] != 'null':
-                    temp_list[0] += int(x['points'])
-                    temp_list[1] += 1
-                country_rating.update({x['country']: temp_list})
+                # if current country has already been added to country_rating dict
+                if x['"points"'] != 'null':
+                    # summarizing wine`s cost for the country
+                    country_rating.update({cur_country: int(x['"points"'][1:-1]) + country_rating[cur_country]})
+                    # summarizing wine`s entrancens for the country
+                    country_rating_entrances.update({cur_country: country_rating_entrances[cur_country] + 1})
 
-        if x['price'] != 'null':
-            if int(x['price']) > most_expensive:
-                most_expensive = int(x['price'])
-                most_expensive_wine.clear()
-                most_expensive_wine.append(x['title'])
+        ''' 
+        Searching for most expensive/cheapest wine 
+        '''
+        if x['"price"'] != 'null':  # if price is not null
+            if int(x['"price"']) > most_expensive_wine_cost:  # if current price is higher than most_expensive_wine_cost
+                most_expensive_wine_cost = int(x['"price"'])
+                most_expensive_wine_title.clear()
+                most_expensive_wine_title.append(x['"title"'])
 
-            if int(x['price']) < cheapest:
-                cheapest = int(x['price'])
-                cheapest_wine.clear()
-                cheapest_wine.append(x['title'])
-            elif int(x['price']) == cheapest:
-                cheapest_wine.append(x['title'])
+            elif int(x['"price"']) == most_expensive_wine_cost:  # if current price is equal to expensive cost
+                if x.get('"title"') is not None:
+                    most_expensive_wine_title.append(x['"title"'])
 
-        if int(x['points']) > highest_score:
-            highest_score = int(x['points'])
+            if int(x['"price"']) < cheapest_wine_cost:  # if current price is lower than cheapest_wine_cost
+                cheapest_wine_cost = int(x['"price"'])
+                cheapest_wine_title.clear()
+                cheapest_wine_title.append(x['"title"'])
 
-            highest_score_list.clear()
-            highest_score_list.append(x['title'])
-        elif int(x['points']) == highest_score:
-            highest_score_list.append(x['title'])
+            elif int(x['"price"']) == cheapest_wine_cost:  # if current price is equal to cheapest cost
+                if x.get('"title"') is not None:
+                    cheapest_wine_title.append(x['"title"'])
 
-        if int(x['points']) < lowest_score:
-            lowest_score = int(x['points'])
-            lowest_score_list.clear()
+        '''
+        Searching for wines with highest/lowest score
+        '''
+        if int(x['"points"'][1:-1]) > int(highest_score):  # if current points is higher than highest_score
+            highest_score = int(x['"points"'][1:-1])
 
-            lowest_score_list.append(x['title'])
-        elif int(x['points']) == lowest_score:
-            lowest_score_list.append(x['title'])
+            highest_score_title.clear()
+            highest_score_title.append(x['"title"'])
 
-    country_with_most_expensive_average_price = []
-    country_with_cheapest_average_price = []
-    cheapest_average_price = 10000
-    most_expensive_average_price = 0
+        elif int(x['"points"'][1:-1]) == int(highest_score):  # if current points are equal to highest
+            highest_score_title.append(x['"title"'])
 
-    for x in country_price:
-        t_list = country_price.get(x)
-        if float(t_list[0]) / t_list[1] > most_expensive_average_price:
-            most_expensive_average_price = float(t_list[0]) / t_list[1]
-            country_with_most_expensive_average_price.clear()
-            country_with_most_expensive_average_price.append(x)
-        elif float(t_list[0]) / t_list[1] == most_expensive_average_price:
-            country_with_most_expensive_average_price.append(x)
+        if int(x['"points"'][1:-1]) < int(lowest_score):  # if current points are lower than lowest_score
+            lowest_score = int(x['"points"'][1:-1])
 
-        if float(t_list[0]) / t_list[1] < cheapest_average_price:
-            cheapest_average_price = float(t_list[0]) / t_list[1]
-            country_with_cheapest_average_price.clear()
-            country_with_cheapest_average_price.append(x)
-        elif float(t_list[0]) / t_list[1] == cheapest_average_price:
-            country_with_cheapest_average_price.append(x)
+            lowest_score_title.clear()
+            lowest_score_title.append(x['"title"'])
 
-    most_rated_country = []
-    most_underrated_country = []
-    highest_average_rating = 0
-    lowest_average_rating = 100
+        elif int(x['"points"'][1:-1]) == int(lowest_score):  # if current points are equal to lowest
+            lowest_score_title.append(x['"title"'])
 
-    for x in country_rating:
-        t_list = country_rating.get(x)
-        if float(t_list[0]) / t_list[1] > highest_average_rating:
-            highest_average_rating = float(t_list[0]) / t_list[1]
-            most_rated_country.clear()
-            most_rated_country.append(x)
-        elif float(t_list[0]) / t_list[1] == highest_average_rating:
-            most_rated_country.append(x)
+    # searching for most active tasters
+    most_active_taster_name, taster_count = search_extremum_in_dictionary(tasters, 'max')
 
-        if float(t_list[0]) / t_list[1] < lowest_average_rating:
-            lowest_average_rating = float(t_list[0]) / t_list[1]
-            most_underrated_country.clear()
-            most_underrated_country.append(x)
-        elif float(t_list[0]) / t_list[1] == lowest_average_rating:
-            most_underrated_country.append(x)
+    # search for country with most expensive/cheapest average price
+    country_average_price = {}
+    for country in country_price:
+        country_average_price.update(
+            {country: (country_price[country]) / country_price_entrances[country]})
+        most_expensive_country_title, \
+        most_expensive_country_average_price = search_extremum_in_dictionary(country_average_price, 'max')
+        cheapest_country_title, \
+        cheapest_country_average_price = search_extremum_in_dictionary(country_average_price, 'min')
 
-    name_taster = []
-    taster_count = 0
+    # search for country with most rated/underrated score
+    country_average_rating = {}
+    for country in country_rating:
+        country_average_rating.update({country: (country_rating[country]) / country_rating_entrances[country]})
 
-    for x in tasters:
-        if int(tasters[x]) > taster_count:
-            taster_count = int(tasters[x])
-            name_taster.clear()
-            name_taster.append(x)
-        elif int(tasters[x]) == taster_count:
-            name_taster.append(x)
+    most_rated_country_title, \
+    most_rated_country_average_score = search_extremum_in_dictionary(country_average_rating, 'max')
 
-    return {'most expensive wine': most_expensive_wine,
-            'cheapest wine': cheapest,
-            'highest score': highest_score_list,
-            'lowest score': lowest_score_list,
-            'most expensive average price': country_with_most_expensive_average_price,
-            'cheapest average price': country_with_cheapest_average_price,
-            'most rated country': most_rated_country,
-            'most underrated country': most_underrated_country,
-            'most active commentator': name_taster
-            }
+    most_underrated_country_title, \
+    most_underrated_country_average_score = search_extremum_in_dictionary(country_average_rating, 'min')
+
+    return (
+            array_to_str(most_expensive_wine_title),  # if the list contain only 1 item it must be transformed to str
+            array_to_str(cheapest_wine_title),
+            array_to_str(highest_score_title),
+            array_to_str(lowest_score_title),
+            array_to_str(most_expensive_country_title),
+            array_to_str(cheapest_country_title),
+            array_to_str(most_rated_country_title),
+            array_to_str(most_underrated_country_title),
+            array_to_str(most_active_taster_name)
+    )
 
 
-def collect_data_for_json(merged_lists):
+def dumping(data_list)->str:
+    """ The function dumps input structure to .json format
+    :param data_list: input structure
+    :return:.json string
+
     """
-    collecting data for evaling
-    """
-    colection = []
 
-    colection.extend(['{', 'statistics',
-                         '[',
-                            '{',
-                            'wine',
-                                '[',
-                                    '{',
-                                        'Gewürztraminer', wine_sort_information(u'Gewürztraminer',
-                                                                                 merged_lists),
-                                    '}',
-                                    '{',
-                                        'Gewurztraminer', wine_sort_information('Gewurztraminer', merged_lists),
-                                    '}',
-                                    '{',
-                                        'Riesling', wine_sort_information('Riesling', merged_lists),
-                                    '}',
-                                    '{',
-                                        'Merlot', wine_sort_information('Merlot', merged_lists),
-                                    '}',
-                                    '{',
-                                        'Madera', wine_sort_information('Madera', merged_lists),
-                                    '}',
-                                    '{',
-                                        'Tempranillo', wine_sort_information('Tempranillo', merged_lists),
-                                    '}',
-                                    '{',
-                                        'Red Blend', wine_sort_information('Red Blend', merged_lists),
-                                    '}',
+    string = ''
 
-                                ']',
-                            '}',
-                            '{',
-                                wine_info(merged_lists),
-                            '}',
-                         ']',
-                     '}'])
+    if type(data_list) is dict:  # type of input structure is dict
+        string += '{\n'
+        keys_ = data_list.keys()
+        len_of_key_array = len(keys_)
+        i = 0
+        for key in data_list:
+            if type(data_list[key]) in (str, int, float, complex, bool):  # if type of value is str
 
-    return colection
+                string += str(key)
+                string += ': '
+                string += str(data_list[key])
 
+            elif type(data_list[key]) is dict:  # if type(value) is dict again
 
-def write_json_to_file(colection, output):
-    tab = '\t'
+                string += key
+                string += ': \n'
+                string += dumping(data_list[key])
 
-    stack_len = 0
+            elif type(data_list[key]) is list:  # if type(value) is list
 
-    for c in colection:
-        if c == '[' or c == '{':
-            for i in range(stack_len):
-                output.write(tab)
+                string += key + ':' + '\n'
+                string += '[\n'
+                for id_, d in enumerate(data_list[key]):  # for each in list
 
-            output.write(c)
-            output.write('\n')
+                    if id_ != len(data_list[key]) - 1:  # if current item not last, use comma after dumping it
+                        string += dumping(d)
+                        string += ',\n'
+                    else:
+                        string += dumping(d) + '\n'
+                string += ']'
 
-            stack_len += 1
-        elif c == '}' or c == ']':
-            for i in range(stack_len-1):
-                output.write(tab)
+                if i != len_of_key_array - 1:
+                    string += '\n'
 
-            output.write(c)
-            output.write(',')
-            output.write('\n')
+            if i != len_of_key_array - 1:  # if the key is not last, use comma to share
+                string += ',\n'
+            else:
+                string += '\n'
+            i += 1
 
-            stack_len = stack_len - 1
+        string += '}'
+        return string
 
-        if type(c) == dict:
+    elif type(data_list) in (str, float, int, complex, ):  # if type of input structure is immutable
 
-            for key in c:
-                for i in range(stack_len):
-                    output.write(tab)
-                # output.write(tab)
+        string += str(data_list)
+        return string
 
-                output.write(key)
-                output.write(' : ')
-                if type(c[key]) == list:
-                    for cc in c[key]:
-                        for i in range(stack_len + 1):
-                            output.write(tab)
-                        output.write(str(cc))
-                        output.write('\n')
+    elif type(data_list) is list:  # if type of input structure is list
+        if len(data_list) == 1:  # if list contains only 1 item
+            string += dumping((data_list[0]))
+        else:
+            string += '[\n'
+            for i, d in enumerate(data_list):
+                if i != len(data_list) - 1:  # using comma to share
+                    string += dumping(d) + ',\n'
                 else:
-                    output.write(str(c[key]))
-                    output.write('\n')
+                    string += dumping(d)
+            string += '\n]'
+        return string
 
-        if type(c) == str and (c != '{' and c != '[' and c != ']' and c != '}' and c != ','):
-            for i in range(stack_len):
-                output.write(tab)
-            # output.write(tab)
 
-            output.write(c)
-            output.write('\n')
+def print_json(data_string, file_name)->None:
+    """ The function gets data string, that was translated to json, and writes it
 
-        if type(c) == list:
-            for cc in c:
-                output.write(str(cc))
-                output.write('\n')
+    :param data_string: input da string in .json
+    :param file_name: name of file to write
+    :return: None
+
+    """
+
+    with open(file_name, 'w') as f:
+        tab = ''  # string of tabs at the beginnings of lines
+        key_and_value = ''  # string that contains pair: key and value
+        inside = False  # if inside word true, else false
+
+        for i, char in enumerate(data_string):
+            if char == '"' and not inside:  # if the " is opening
+                inside = True
+            elif char == '"' and inside:  # if the " is closing
+                inside = False
+
+            if char in ('[', '{'):
+                if inside:  # if symbols are inside the word, then just add it to key_and_value
+                    key_and_value += char
+
+                    f.write(tab + char)
+
+                else:  # if symbol is closing or opening
+                    f.write(tab + char)
+                    tab += '\t'
+                    inside = False
+            elif char in (']', '}'):
+                if inside:
+                    key_and_value += char
+
+                else:
+                    tab = tab[:-1]
+                    f.write(tab + char)
+                    key_and_value = ''
+                    inside = False
+            elif char == '\n':
+                    f.write(tab + key_and_value)
+                    f.write('\n')
+                    key_and_value = ''
+            else:
+                key_and_value += char
 
 
 """
 main part
 """
-output = open('stats.json', 'w')
 
-dictionary_list_1 = parsing(f)
-dictionary_list_2 = parsing(g)
+dictionary_list_1 = parsing(first_input_file)
+dictionary_list_2 = parsing(second_input_file)
 
-limit = sys.getrecursionlimit()
-sys.setrecursionlimit(20*limit)
+merged = find_duplicate(dictionary_list_1, dictionary_list_2)  # looking for duplicates
 
-merged_lists = merging(dictionary_list_1, dictionary_list_2)  # merging 2 dictionaries
+count_nul = count_null_(merged)  # counting null-prices
 
-count_nul = count_null_(merged_lists)  # counting null-prices
-temp_merged_lists = merged_lists.copy()
-merged_lists = push_null_in_the_end(temp_merged_lists)
+temp_merged_lists = merged.copy()
+merged = push_null_in_the_end(temp_merged_lists)  # pushing null- prices to the end for comfortable sorting
+merged_length = len(merged)
 
-quick_sort(merged_lists, 0, 131470 - count_nul)  # sorting file by quick sort
+quick_sort(merged, 0, merged_length-count_nul-1)
+data = dumping(merged)
 
-write_json_to_file(collect_data_for_json(merged_lists), output)  # writing statistics to json file
+print_json(data, 'winedata_full.json')  # dumping
 
-f.close()
-g.close()
+wine_sorts = \
+    ['"Gewurztraminer"',
+     '"Gewürztraminer"',
+     '"Riesling"',
+     '"Merlot"',
+     '"Madera"',
+     '"Tempranillo"',
+     '"Red Blend"'
+     ]
 
+wine_sorts_info = sorts_information(wine_sorts, merged)  # searching for information for each sort from wine_sorts
+
+(most_expensive_wine_title,
+ cheapest_wine_title,
+ highest_score_title,
+ lowest_score_title,
+ most_expensive_country_title,
+ cheapest_country_title,
+ most_rated_country_title,
+ most_underrated_country_title,
+ most_active_taster_name) = wine_records(merged)
+
+list_to_json = {'"statistics"':
+                {'"wine:"': wine_sorts_info,
+                 '"most_expensive_wine"': most_expensive_wine_title,
+                 '"cheapest wine"': cheapest_wine_title,
+                 '"highest score"': highest_score_title,
+                 '"lowest score"': lowest_score_title,
+                 '"most expensive country"': most_expensive_country_title,
+                 '"cheapest country"': cheapest_country_title,
+                 '"most rated country"': most_rated_country_title,
+                 '"most underrated country"': most_underrated_country_title,
+                 '"most active commentator"': most_active_taster_name}}
+
+print_json(dumping(list_to_json), 'stats.json')    # writing statistics to .json file
