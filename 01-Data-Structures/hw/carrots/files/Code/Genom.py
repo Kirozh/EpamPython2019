@@ -1,148 +1,165 @@
-dna_fasta = open("Data.txt", 'r')
-# dna_fasta = open('dna.fasta', 'r')
-
-dna_to_rna = open("Translated_from_dna_to_rna.txt", 'w')
-
-count = open("Count_nucleotides.txt", 'w')
+input_file_name = "dna.fasta"
+codon_table_file_name = 'rna_codon_table.txt'
 
 
-def translate_from_dna_to_rna(f):
-    #dna_to_rna = open("Translated_from_dna_to_rna", 'w')
-    for line in f:
-        if not line.startswith('>'):
+def read_rna_codon_table(file_name):
+    """This function reads data from codon file and forms dictionary
+    :param file_name: name of data-codon-file
+    :return: dictionary
 
-            for letter in line:
+    """
 
-                if letter == 'G':
-                    dna_to_rna.write('C')
+    codon_table = open(file_name, 'r')
+    codon_dict = {}
+    iskey = True  # is current symbol locates in key
+    isvalue = False  # is current symbol locates in value
+    current_key = ''
+    current_value = ''
+    currently_in_pair_key_value = True  # is current space inside in pair key-value or it is outside
 
-                elif letter == 'C':
-                    dna_to_rna.write('G')
+    for line in codon_table:
+        for c in line:
+            if c.isalpha():
+                currently_in_pair_key_value = True
+                if iskey:
+                    current_key += c
+                elif isvalue:
+                    current_value += c
+            else:
+                if c == ' ':
+                    if current_value == '' and currently_in_pair_key_value:
+                        iskey = False
+                        isvalue = True
+                    else:
+                        if currently_in_pair_key_value:
+                            currently_in_pair_key_value = False
+                            codon_dict.update({current_key: current_value})
+                            iskey = True
+                            isvalue = False
+                            current_key = ''
+                            current_value = ''
+                elif c == '\n':
+                    currently_in_pair_key_value = False
+                    codon_dict.update({current_key: current_value})
+                    iskey = True
+                    isvalue = False
+                    current_key = ''
+                    current_value = ''
 
-                elif letter == 'T':
-                    dna_to_rna.write('A')
-
-                elif letter == 'A':
-                    dna_to_rna.write('U')
-
-                else:
-                    dna_to_rna.write('\n')
-
-        else:
-
-            dna_to_rna.write(" ".join([line[:-1], "translated to RNA", '\n']))
-
-    dna_to_rna.close()
-    #return dna_to_rna
-    # return output
+    codon_table.close()
+    return codon_dict
 
 
-def count_nucleotides(f):
+def count_nucleotides(file_name):
+    """This function counts nucleotides in file f by scanning all symbols
+    in file lines that include only nucleotides
+    :param file_name: string of file path or only file-name
 
-    nucleo_base = {"G": 0, "C": 0, "T": 0, "A": 0}
+    """
+
+    input_file = open(file_name, 'r')
+    count_nucleotides_file = open("counting_nucleotides.txt", 'w')
+    nucleo_base = {"G": 0, "C": 0, "T": 0, "A": 0}  # dictionary with nucleotide-keys
     row = 0  # row number
 
-    for lines in f:
-        if not lines.startswith('>'):
-            # print(lines)
-            # Считаем количество вхождений
-            nucleo_base.update({'G': nucleo_base.get('G') + lines.count('G')})
-            nucleo_base.update({'C': nucleo_base.get('C') + lines.count('C')})
-            nucleo_base.update({'T': nucleo_base.get('T') + lines.count('T')})
-            nucleo_base.update({'A': nucleo_base.get('A') + lines.count('A')})
+    for lines in input_file:
+        if not lines.startswith('>'):  # if this line includes only nucleotides
+            nucleo_base.update({'G': nucleo_base['G'] + lines.count('G')})
+            nucleo_base.update({'C': nucleo_base['C'] + lines.count('C')})
+            nucleo_base.update({'T': nucleo_base['T'] + lines.count('T')})
+            nucleo_base.update({'A': nucleo_base['A'] + lines.count('A')})
 
-            # for letter in lines:
-            #     if letter == 'G':
-            #         num = nytro_base.get('G')
-            #         num += 1
-            #         nytro_base.update({"G": num})
-            #     elif letter == 'C':
-            #         num = nytro_base.get('C')
-            #         num += 1
-            #         nytro_base.update({"C": num})
-            #     elif letter == 'T':
-            #         num = nytro_base.get('T')
-            #         num += 1
-            #         nytro_base.update({"T": num})
-            #     else:
-            #         num = nytro_base.get('A')
-            #         num += 1
-            #         nytro_base.update({"A": num})
-        elif row != 0:
-            #
-            #print(nucleo_base.items())
-            count.write(str(tuple(nucleo_base.items())) + '\n')  # записываем в файл
-            nucleo_base.update([("G", 0), ("C", 0), ("T", 0), ("A", 0)])  # обнуляем словарь
+        elif row != 0:  # Checking if current line starts with '>' that means that first amount of nucleotides is over
+                        # and counting must start anew
+            count_nucleotides_file.write(str(tuple(nucleo_base.items())) + '\n')
+            nucleo_base.update([("G", 0), ("C", 0), ("T", 0), ("A", 0)])  # zeroing dictionary
 
-        # print(nytro_base.items())
         row += 1
-    count.write(str(tuple(nucleo_base.items())) + '\n')
-    # dict_list.append(tuple(nucleo_base.items()))
-    count.close()
-    # return dict_list
 
-# print(f.read())
+    count_nucleotides_file.write(str(tuple(nucleo_base.items())) + '\n')
+    count_nucleotides_file.close()
+    input_file.close()
 
 
-def translate_rna_to_protein():
-    codon = open('rna_codon_table.txt', 'r')
-    # cod = open('rna_cod.txt', 'w')
-    protein = open('rna_to_protein.txt', 'w')
+def translate_dna_to_rna(file_name):
+    """This function translates dna code to rna by replacing
+    nucleotide G on C, C on G, T on A, A on U.
+    :param file_name: file-path or file-name string
 
-    try:
-        rna = open('Translated_from_dna_to_rna.txt', 'r')
-    except IOError:
-        print('no file')
+    """
 
-    codon_d = {}  # считывание кодонов из файла rna_codon, и добавление каждого из них словарь
-    for line in codon:
-        # print(line)
-        '''
-        обработка строк файла rna_codon_table, в которых нет слова stop
-        '''
-        if (not line.startswith('UAA')) and (not line.startswith('UAG')) and (not line.startswith('UGA')):
-
-            i = 0
-            for j in range(4):
-                codon_d.update({line[i:i+3]: line[i+4]})
-                i += 11
-        # обработка строк, в которых есть слово stop
-        else:
-
-            codon_d.update({line[0:3]: line[4:8]})
-            i = 11
-            for j in range(3):
-                codon_d.update({line[i:i + 3]: line[i + 4]})
-                i += 11
-
-    # перевод rna в protein
-
-    for line in rna:
+    data_file = open(file_name,'r')
+    dna_to_rna_file = open("translation_dna_to_rna.txt", 'w')
+    for line in data_file:
         if not line.startswith('>'):
-
-            i = 0
-            len_ = len(line)
-
-            while i < len_ - 1:
-                temp_string = line[i: i + 3]
-                protein.write(str(codon_d.get(temp_string)) + ' ')
-                i += 3
-
-            protein.write('\n')
-
+            for letter in line:
+                if letter == 'G':
+                    dna_to_rna_file.write('C')
+                elif letter == 'C':
+                    dna_to_rna_file.write('G')
+                elif letter == 'T':
+                    dna_to_rna_file.write('A')
+                elif letter == 'A':
+                    dna_to_rna_file.write('U')
+                else:
+                    dna_to_rna_file.write('\n')
         else:
-            protein.write(str(line[:-5]) + 'protein\n')
+            dna_to_rna_file.write(" ".join([line[:-1], '\n']))
+
+    dna_to_rna_file.close()
+    data_file.close()
+
+
+def translate_rna_to_protein(codon_file_name):
+    """ This function first of all reads codones from rna_codon_table file.
+        Then it fills dictionary with rna-sequences and matched to them codones.
+        After that the function takes rna_file, forms strings for each gene, devides line by three symbol and
+        writes matching codon to output file - protein.
+
+    """
+
+    protein = open('translation_rna_to_protein.txt', 'w')
+    rna_file = open('translation_dna_to_rna.txt', 'r')  # file that was got by translating DNA to RNA
+    codon_dict = read_rna_codon_table(codon_file_name)
+    ''' using function read_rna_codon_table to read codons and sequenced to them rna'''
+
+    string_of_nucleotides = ''  # string of rna-nucleotides that must be translated to protein
+    array_of_strings = []  # saving different genes
+    array_of_protein_names = []  # saving gene`s names
+
+    # reading rna_file and share different genes
+    for line in rna_file:
+        if line.startswith('>'):
+            array_of_protein_names.append(line)
+            if string_of_nucleotides != '':
+                array_of_strings.append(string_of_nucleotides)
+        else:
+            string_of_nucleotides += line[:-1]
+
+    array_of_strings.append(string_of_nucleotides)
+
+    # translating rna to protein
+    for i, string_of_nucleotides in enumerate(array_of_strings):
+        protein.write(array_of_protein_names[i])  # writing gene`s name
+
+        i = 0
+        while i < len(string_of_nucleotides)-1:
+            nucleotides_triple = string_of_nucleotides[i:i+3]
+
+            for key in codon_dict:
+                if key == nucleotides_triple:
+                    protein.write(codon_dict[key] + ' ')
+
+            if i % 90 == 0 and i != 0:  # newline for better file`s readability
+                protein.write('\n')
+            i += 3
+        protein.write('\n')
 
     protein.close()
-    # dna_to_rna.close()
-    codon.close()
+    rna_file.close()
 
 
-translate_from_dna_to_rna(dna_fasta)
-
-count_nucleotides(dna_fasta)
-
-translate_rna_to_protein()
-
-dna_fasta.close()
-dna_to_rna.close()
+translate_dna_to_rna(input_file_name)
+count_nucleotides(input_file_name)
+read_rna_codon_table(codon_table_file_name)
+translate_rna_to_protein(codon_table_file_name)

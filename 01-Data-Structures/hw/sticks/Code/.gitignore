@@ -1,0 +1,4 @@
+parser.py - source code
+stats.json - output file with statistics
+winedata_1.json, winedata_2.json - input files
+winedata_full.json - output file with merged files

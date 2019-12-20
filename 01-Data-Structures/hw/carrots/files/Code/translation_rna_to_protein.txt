@@ -1,0 +1,41 @@
+>HSBGPG Human gene for bone gla protein (BGP) 
+P S K G D L G G R G T S P Y G E E Stop R P V S G L P Y L S R P P 
+T A P S G R L R T R R R V A S V A L W Y S R E C E E R D N R 
+D R R E T Stop R P V R P L T G V E G S P A Stop R H P R L S S F V 
+V P G G E E W G N R P S G K R Q I G G T T S E L G K R G R D 
+G N V S L S S L L V R R A L R P L P P T P G T P T R P H L V 
+R G K G N V H A S G R H V S G R F H V H T P T W T T Q G P G 
+R G E W D Q G V R V R G Stop G R W R T D R Stop S F R S D E G W T 
+R R V W V S V D Y G R G D E V S E T Q V R P P V A P S L L W 
+V R D G H S Y R P H S L F R L D P V P G R R G P T R H P L D 
+V V P H R R D P T P P P C P S D G T T R G T S G Y T S L S S 
+L P V K R A P D Y G G A A H R V S G S G D G P R G P R V L P 
+P H T R V R P D T A Q P T G V A E S P P D S R E D A G P D P 
+T A R R P D R P L G S R R G E V R G K K G E G E R E R D W R 
+V G I P T P Q G Stop Stop G R R G F I Stop G L 
+>HSGLTH1 Human theta 1-globin gene 
+P S K G D L G G R G T S P Y G E E Stop R P V S G L P Y L S R P P 
+T A P S G R L R T R R R V A S V A L W Y S R E C E E R D N R 
+D R R E T Stop R P V R P L T G V E G S P A Stop R H P R L S S F V 
+V P G G E E W G N R P S G K R Q I G G T T S E L G K R G R D 
+G N V S L S S L L V R R A L R P L P P T P G T P T R P H L V 
+R G K G N V H A S G R H V S G R F H V H T P T W T T Q G P G 
+R G E W D Q G V R V R G Stop G R W R T D R Stop S F R S D E G W T 
+R R V W V S V D Y G R G D E V S E T Q V R P P V A P S L L W 
+V R D G H S Y R P H S L F R L D P V P G R R G P T R H P L D 
+V V P H R R D P T P P P C P S D G T T R G T S G Y T S L S S 
+L P V K R A P D Y G G A A H R V S G S G D G P R G P R V L P 
+P H T R V R P D T A Q P T G V A E S P P D S R E D A G P D P 
+T A R R P D R P L G S R R G E V R G K K G E G E R E R D W R 
+V G I P T P Q G Stop Stop G R R G F I Stop G L R Stop R E W R G P V K N 
+T K I I S D L W Y I T C G F C P P E P R S R Stop V S R G Q P R 
+Q P L T R A R Q G P R G C S G T W G P A A S T P R R G G P P 
+A P W G P A R R V R V A P A S R A A Q G R A P T A T G A S W 
+P A T T R G T P S S T R R C S R R C A V S G T F P R R P T R 
+G G G G P R E G G V R G A C A E W V Q G E R P G R T E R G G 
+A S G Stop R G W T W T R G R G V F S L G C R S S T A C A T R S 
+G T S R T C W M G C A T G A T R W T C A R S T L T W A G R R 
+S T R R R H D P G T G A L P G P P H P R P P H A P P T S A H 
+S E L A S G V E D P V T D D H W E R A V M G P L K S G R D V 
+R S D L F K D S V Q Stop S R D Q R L M A T Stop H P P T G A L G V 
+R W K G H K L I S E R V L V G R T A R E S S S P A L S F R 
