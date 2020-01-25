@@ -1,38 +1,50 @@
-def atom(data) -> ():
+def atom(data=None):
+    """ The function encapsulates variable data
+
+    :param data: input variable
+    :return vget, vset, veval, vdel: output functions that set, get, deletes and produces values
+    """
 
     def get_value():
-        nonlocal data
+        global data
         return data
-    def set_value(update = data):
-        nonlocal data
+
+    def set_value(update=data):
+        global data
         data = update
         return data
 
     def process(*f):
-        nonlocal data
-        temp = data
+        global data
         for c in f:
-            temp = (c(data))
-            data += 1
-        data = temp
+            data = c()
         return data
 
     def delete_value():
-        nonlocal data
+        global data
         del data
 
-    return get_value(), set_value(11), process(square, one_strange_func), delete_value()
-    # return process(square, square, one_strange_func)
-
-def square(data):
-    return data*data
-
-def one_strange_func(data, proc=100):
-    return data//proc
+    return get_value, set_value, process, delete_value
 
 
-global data
+def square():  # one of functions to apply
+    return data * data
+
+
+def one_strange_func(proc=5):  # one of functions to apply
+    return data % proc
+
+
+''' Main part
+
+'''
 data = 10
 
-vget, vset, veval, vdel = atom(data)
-print(vget, vset, veval, vdel)
+vget, vset, veval, vdel = atom()
+print(vset(12))
+print(vget())
+print(vset(14))
+print(data)
+print(veval(one_strange_func, square, one_strange_func))
+vdel()
+
